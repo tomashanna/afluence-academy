@@ -1,0 +1,80 @@
+/* Diccionario Nivel 1 — re-skin al tema Afluence, layout con índice lateral.
+   Apunta a las clases originales del diccionario (category, cluster, concept…)
+   y reutiliza las variables/base de afluence.css. */
+
+/* contenedor ancho propio del diccionario (los módulos usan .wrap 740px) */
+.dwrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+/* ---- cabecera (ancho completo) ---- */
+.dhead{padding:46px 0 0}
+.dhead .eyebrow{font-family:var(--exp);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:16px}
+h1.dtitle{font-family:var(--exp);font-weight:900;line-height:.9;letter-spacing:-.01em;font-size:clamp(48px,11vw,104px);text-transform:uppercase}
+h1.dtitle .out{color:transparent;-webkit-text-stroke:1.3px #BDBDB8;display:block}
+h1.dtitle .sol{color:var(--strong);display:block}
+.dlead{margin-top:22px;color:var(--muted);font-size:16px;max-width:640px}
+.dlead b{color:var(--ink)}
+
+/* ---- layout 2 columnas: índice lateral + contenido ---- */
+.dlayout{display:grid;grid-template-columns:248px 1fr;gap:52px;align-items:start;margin-top:40px}
+.dside{position:sticky;top:20px;align-self:start;max-height:calc(100vh - 40px);overflow-y:auto;padding-bottom:20px}
+.dcontent{min-width:0}
+
+/* buscador (en la barra lateral) */
+.dsearch-wrap{position:relative;margin-bottom:10px}
+.dsearch{width:100%;padding:11px 12px 11px 36px;border:1px solid var(--line);background:var(--panel);font-family:var(--sans);font-size:14px;color:var(--ink)}
+.dsearch:focus{outline:none;border-color:var(--strong)}
+.dsearch-wrap svg{position:absolute;left:11px;top:50%;transform:translateY(-50%);width:15px;height:15px;opacity:.5}
+.dsearch-count{font-family:var(--exp);font-size:9.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted2);margin:0 0 16px;min-height:12px}
+
+/* índice de categorías (vertical) */
+.dnav-h{font-family:var(--exp);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted2);margin-bottom:8px}
+.dnav{display:flex;flex-direction:column;gap:1px}
+.dnav a{display:block;font-family:var(--exp);font-size:11px;font-weight:600;letter-spacing:.02em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:8px 10px;border-left:2px solid var(--line);transition:all .14s}
+.dnav a:hover{color:var(--strong);border-left-color:#B8B8B3;background:var(--panel2)}
+.dnav a.active{color:var(--strong);border-left-color:var(--strong);background:var(--panel);font-weight:700}
+.dnav a .dn-num{color:var(--muted2);margin-right:7px}
+.dnav a.active .dn-num{color:var(--strong)}
+
+/* ---- categoría ---- */
+.category{margin-top:54px;scroll-margin-top:24px}
+.category:first-child{margin-top:0}
+.category-header{display:flex;align-items:baseline;gap:14px;border-bottom:2px solid var(--strong);padding-bottom:12px;margin-bottom:6px;flex-wrap:wrap}
+.category-num{font-family:var(--exp);font-weight:900;font-size:13px;letter-spacing:.2em;color:var(--muted2)}
+.category-header h2{font-family:var(--exp);font-weight:900;font-size:clamp(22px,4vw,34px);line-height:1;text-transform:uppercase;color:var(--strong);letter-spacing:-.01em}
+.category-header h2 em{font-style:normal;color:transparent;-webkit-text-stroke:1.2px #BDBDB8}
+.category-intro{font-size:15px;color:var(--muted);margin:14px 0 6px;max-width:680px;line-height:1.6}
+
+/* ---- cluster ---- */
+.cluster{margin-top:28px}
+.cluster-label{font-family:var(--exp);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted2);border:1px solid var(--line);padding:4px 8px;display:inline-block;margin-bottom:10px}
+.cluster-title{font-family:var(--exp);font-weight:800;font-size:15px;text-transform:uppercase;color:var(--strong);letter-spacing:.01em;margin-bottom:6px}
+.cluster-title em{font-style:normal;color:var(--muted)}
+.cluster-intro{font-size:14px;color:var(--muted);margin-bottom:16px;max-width:680px;line-height:1.55}
+
+/* ---- concepto ---- */
+.concept{border:1px solid var(--line);border-left:3px solid var(--strong);background:var(--panel);padding:15px 18px;margin-bottom:11px}
+.concept-term{font-family:var(--exp);font-weight:800;font-size:14px;text-transform:uppercase;color:var(--strong);letter-spacing:.02em}
+.concept-term .alt{font-family:var(--sans);font-weight:500;text-transform:none;color:var(--muted2);font-size:12.5px;letter-spacing:0;margin-left:4px}
+.concept-def{font-size:14.5px;color:var(--ink);margin-top:7px;line-height:1.55}
+.concept-def b{color:var(--strong)}
+.concept-example{font-size:13.5px;color:#555;margin-top:11px;background:var(--amberBg);border-left:3px solid var(--amber);padding:10px 14px;line-height:1.5}
+.concept-example::before{content:"Ej. ";font-family:var(--exp);font-weight:700;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--amber)}
+.concept-example b{color:var(--strong)}
+.concept-note{font-size:13px;color:var(--muted);margin-top:9px;background:var(--panel2);padding:10px 14px;line-height:1.5;border-left:2px solid var(--line)}
+.concept-note b{color:var(--ink)}
+
+/* ---- buscador: ocultar lo que no matchea ---- */
+.is-hidden{display:none !important}
+.dno-results{display:none;font-family:var(--exp);font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);padding:30px 0}
+.dno-results.show{display:block}
+
+/* ---- responsive: índice arriba en horizontal ---- */
+@media(max-width:860px){
+  .dlayout{grid-template-columns:1fr;gap:0}
+  .dside{position:sticky;top:0;max-height:none;overflow:visible;background:var(--bg);z-index:40;border-bottom:1px solid var(--line);padding:12px 0 14px;margin-bottom:10px}
+  .dnav-h{display:none}
+  .dnav{flex-direction:row;flex-wrap:wrap;gap:6px}
+  .dnav a{border-left:none;border:1px solid var(--line);padding:6px 9px;font-size:10px}
+  .dnav a.active{border-color:var(--strong)}
+  .category:first-child{margin-top:20px}
+}

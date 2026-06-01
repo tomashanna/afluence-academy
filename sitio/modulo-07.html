@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Módulo 07 · Las Métricas — Afluence · Nivel 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800;900&family=Archivo+Expanded:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/afluence.css">
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <a href="index.html" title="Volver al índice">
+        <div class="logo"><svg viewBox="0 0 40 40" fill="none"><path d="M8 32 L24 6 L24 32 Z" fill="#111"/><path d="M24 32 L24 18 L33 32 Z" fill="#999"/><circle cx="11" cy="32" r="4" fill="#111"/></svg></div>
+        <div><div class="bn">Afluence</div><div class="bt">Building your empire</div></div>
+      </a>
+    </div>
+    <div class="eyebrow">Zero to Hero · Nivel 1 · Módulo 07</div>
+    <h1 class="title"><span class="out">Las</span><span class="sol">Métricas.</span></h1>
+    <p class="lead"><b>Las métricas son cómo sabes si el funnel funciona o solo <em>parece</em> que funciona.</b> Sin ellas operas a ciegas, confundes suerte con sistema y no puedes saber dónde se rompe lo que no vende. Escúchalo, léelo, míralo y valida lo aprendido.</p>
+
+    <div class="tabs">
+      <button class="tab active" onclick="showTab('lesson',this)"><span class="n">A</span>Lección</button>
+      <button class="tab" onclick="showTab('podcast',this)"><span class="n">B</span>Podcast</button>
+      <button class="tab" onclick="showTab('video',this)"><span class="n">C</span>Vídeo</button>
+      <button class="tab" onclick="showTab('quiz',this)"><span class="n">D</span>Quiz</button>
+    </div>
+  </header>
+
+  <!-- ============ LECCIÓN ============ -->
+  <div class="panel-view lesson active" id="lesson">
+    <p class="intro">Las <b>métricas</b> son cómo sabes si el funnel funciona o solo <em>parece</em> que funciona; sin ellas operas <b>a ciegas</b>, confundes <b>suerte con sistema</b>, y no puedes saber dónde se rompe lo que no vende.</p>
+
+    <div class="note"><b>Términos del diccionario que dominarás aquí:</b> §11 Métricas y unit economics (CPL, CAC, CPA, LTV, ROAS, ROI, AOV, Conversion Rate, CTR, Open Rate, Bounce Rate, Scroll Depth, Show-up Rate, Ratio LTV:CAC).</div>
+
+    <h2><span class="hn">·</span> Por qué importa</h2>
+    <p>"Vendimos $47.000" no dice absolutamente nada por sí solo. ¿Gastaste $5.000 o $45.000 en publicidad para lograrlo? ¿El cuello de botella estuvo en el tráfico, en la captura o en el cierre? ¿Es repetible o fue un golpe de suerte? Sin métricas, "vendimos $47.000" es una anécdota, no información. Las métricas son lo que convierte un resultado en <b>conocimiento accionable</b> —en saber qué pasó, por qué, y qué hacer al respecto—.</p>
+    <p>Y hay algo más profundo que vale entender: el sector entero compite, en el fondo, en <b>quién mide y testea más rápido</b>. El que ve los números antes y con más claridad decide mejor, corrige antes, y escala lo que funciona mientras los demás siguen adivinando. No necesitas ser un genio de los números —con entender bien unas seis métricas y saber leer cuándo un funnel está sano alcanza para operar—. Pero sin esa base, estás volando sin instrumentos.</p>
+
+    <h2><span class="hn">01</span> Las métricas de costo y retorno</h2>
+    <p>Estas miden cuánto te cuesta conseguir clientes y cuánto vuelve de lo que inviertes:</p>
+    <ul>
+      <li><b>CPL (Cost Per Lead)</b> — cuánto cuesta conseguir un contacto (un email). Inversión en ads ÷ número de leads.</li>
+      <li><b>CAC (Customer Acquisition Cost)</b> — cuánto cuesta conseguir un cliente que efectivamente paga. Inversión ÷ número de clientes. Es <b>siempre mayor que el CPL</b>, porque no todos los leads compran: necesitas varios leads para lograr un cliente.</li>
+      <li><b>CPA (Cost Per Acquisition)</b> — similar al CAC; el costo por una conversión específica que definas.</li>
+      <li><b>ROAS (Return On Ad Spend)</b> — cuántos dólares de venta genera cada dólar gastado en ads. Ingresos por ads ÷ inversión en ads.</li>
+      <li><b>ROI (Return On Investment)</b> — el retorno sobre la inversión <em>total</em>, no solo de ads: incluye herramientas, equipo, comisiones, todo. Es la foto real de la rentabilidad.</li>
+    </ul>
+    <div class="formula">CPL = inversión en ads ÷ leads · CAC = inversión en ads ÷ clientes · ROAS = ingresos por ads ÷ inversión en ads</div>
+    <div class="note"><b>ROAS vs ROI, una distinción que confunde y cuesta.</b> Inviertes $5.000 en ads y generas $20.000 → ROAS = 4x, se ve genial. Pero si además gastaste $3.000 en equipo, herramientas y comisiones, tu inversión real fue $8.000, y el ROI mira esos $8.000, no solo los ads. Un ROAS alto puede esconder un ROI mediocre si los costos operativos son grandes. El ROAS te dice si los anuncios funcionan; el ROI te dice si el negocio gana dinero. No los confundas.</div>
+
+    <h2><span class="hn">02</span> Las métricas de valor del cliente</h2>
+    <ul>
+      <li><b>AOV (Average Order Value)</b> — el ticket promedio por orden. Ingresos totales ÷ número de compras.</li>
+      <li><b>LTV (Lifetime Value)</b> — los ingresos totales que genera un cliente a lo largo de toda su relación contigo, sumando todas sus compras en la escalera de valor.</li>
+      <li><b>Ratio LTV:CAC</b> — cuántas veces más vale el cliente que lo que costó adquirirlo. <b>Saludable: 3:1 o más.</b></li>
+    </ul>
+    <p>Esta es la relación que decide si el negocio vive o muere, y vale grabársela:</p>
+    <div class="mapbox">LTV &gt; CAC   →  el negocio funciona (ganas en cada cliente)
+LTV &lt; CAC   →  pierdes en cada cliente (y más tráfico te hunde más rápido)</div>
+    <p>Si un cliente te deja $700 a lo largo de su relación (LTV) y conseguirlo te costó $200 (CAC), ganas $500 por cliente y el negocio escala. Si conseguirlo costara $800, perderías en cada venta —y aquí está lo peligroso: comprar <em>más</em> tráfico no te salvaría, te hundiría más rápido, porque cada cliente nuevo suma pérdida—. La regla práctica del sector busca un ratio de <b>al menos 3:1</b> para cubrir los costos operativos y dejar margen sano.</p>
+    <div class="note"><b>Por qué la escalera de valor es tan importante, visto desde los números.</b> Aquí se conecta todo con el Módulo 4. La escalera (reto → curso → high-ticket) sube el <b>LTV</b>: el cliente ya no vale solo los $97 del reto, sino los $697 de toda su trayectoria. Y un LTV alto te da un superpoder competitivo: puedes <b>pagar más por adquirir</b> un cliente que tu competencia y aun así ganar. Si tú puedes gastar $200 en CAC porque tu LTV es $700, y tu competidor solo puede gastar $80 porque su LTV es $250, tú ganas la subasta del tráfico —puedes pujar más alto por los mismos anuncios—. Quien tiene la mejor escalera puede comprar más atención. Por eso la escalera no es solo una táctica de venta; es una ventaja en la economía del negocio.</div>
+
+    <h2><span class="hn">03</span> Las métricas de conversión por etapa</h2>
+    <p>Estas miden qué porcentaje de gente avanza de una etapa a la siguiente, y son las que te dicen <em>dónde</em> se rompe el funnel:</p>
+    <ul>
+      <li><b>Conversion Rate</b> — porcentaje que pasa a la siguiente etapa.</li>
+      <li><b>CTR (Click-Through Rate)</b> — porcentaje de quienes ven algo (un anuncio, un email) y hacen clic.</li>
+      <li><b>Open Rate</b> — porcentaje de correos abiertos sobre los enviados.</li>
+      <li><b>Bounce Rate</b> — porcentaje de visitantes que llegan a una página y se van sin hacer nada.</li>
+      <li><b>Scroll Depth</b> — hasta dónde baja la gente en una landing antes de irse.</li>
+      <li><b>Show-up Rate</b> — porcentaje de registrados que efectivamente aparecen a un webinar o a una llamada (registrarse no es asistir).</li>
+    </ul>
+    <p>Mirar estas métricas en cadena es como tener una radiografía del funnel. Te dice <b>exactamente dónde</b> está el problema:</p>
+    <div class="mapbox">1.000 ven el anuncio
+   │ CTR 3%
+30 entran a la landing
+   │ conversión de captura 40%
+12 dejan su correo (leads)
+   │ show-up / open 50%
+6 llegan a la oferta
+   │ conversión 10%
+0,6 compran</div>
+    <ul>
+      <li>¿CTR bajo? → el problema está en el <b>anuncio / el creativo (TOFU)</b>: no engancha.</li>
+      <li>¿Mucha visita pero pocos dejan el correo (bounce alto)? → el problema está en la <b>landing de captura o el lead magnet</b>: no convence de dejar los datos.</li>
+      <li>¿Muchos leads pero pocos llegan a la oferta (show-up u open bajos)? → el problema está en el <b>nurturing</b>: la secuencia no calienta, o faltan recordatorios.</li>
+      <li>¿Llegan a la oferta pero no compran? → el problema está en la <b>oferta, el copy o el precio</b>.</li>
+    </ul>
+    <p>Esta es la utilidad real de las métricas: no te dicen solo <em>que</em> algo está mal, te dicen <em>dónde</em>. Sin esto, optimizas a ciegas y arreglas lo que no estaba roto.</p>
+
+    <h2><span class="hn">04</span> La obsesión sana: medir para testear</h2>
+    <p>Un principio que atraviesa todo el sector: <b>el que testea más rápido, gana</b>. Precio, ángulo, creativo, landing, hook —todo se prueba en paralelo, y se mantiene lo que gana—. Pero para testear hay que medir: si no mides, no sabes qué versión ganó, y entonces no estás testeando, estás adivinando con pasos extra. Por eso las métricas no son "reportería" que se mira al final por obligación —son el sistema nervioso de la operación, lo que permite aprender y corregir en tiempo real—. El <em>cómo</em> testear de forma sistemática es material del Nivel 3; aquí basta con entender que <b>medir es el prerrequisito de mejorar</b>.</p>
+
+    <h2><span class="hn">⚠</span> Errores comunes del principiante</h2>
+    <ul>
+      <li><b>Mirar solo el revenue.</b> "Facturamos $47K" sin saber el costo, el ROAS ni el ROI no dice si fue buen negocio o una pérdida disfrazada.</li>
+      <li><b>Confundir CPL con CAC.</b> El CPL es por contacto; el CAC por cliente que paga. El CAC siempre es mayor —olvidarlo lleva a subestimar groseramente el costo real—.</li>
+      <li><b>Confundir ROAS con ROI.</b> El ROAS solo mira los ads; el ROI mira toda la inversión. Un ROAS alto puede ocultar un negocio que no gana.</li>
+      <li><b>Ignorar el LTV.</b> Juzgar un funnel por la primera venta cuando la ganancia real está en la escalera. Un funnel "no rentable" en la primera compra puede ser excelente mirando el LTV.</li>
+      <li><b>Optimizar a ciegas.</b> Cambiar la landing cuando el problema era el tráfico, o comprar más tráfico cuando el problema era la oferta. Las métricas por etapa evitan justo esto.</li>
+      <li><b>Tener las métricas dispersas en siete herramientas.</b> Datos regados sin consolidar = ninguna conclusión clara. (La consolidación de métricas y la atribución son un dolor operativo conocido, que se profundiza en el Módulo 8.)</li>
+      <li><b>No testear por miedo a "ensuciar" los datos.</b> No testear es, casi siempre, la decisión más cara: te deja estancado en lo que ya tienes sin saber si algo mejor era posible.</li>
+    </ul>
+
+    <h2><span class="hn">★</span> Glosario del módulo</h2>
+    <div class="glossary">
+      <div class="gterm"><div class="gt">CPL (Cost Per Lead)</div><div class="gd">Cuánto cuesta conseguir un email.</div></div>
+      <div class="gterm"><div class="gt">CAC (Customer Acquisition Cost)</div><div class="gd">Cuánto cuesta conseguir un cliente que paga.</div></div>
+      <div class="gterm"><div class="gt">CPA (Cost Per Acquisition)</div><div class="gd">Costo por una conversión específica; similar al CAC.</div></div>
+      <div class="gterm"><div class="gt">LTV (Lifetime Value)</div><div class="gd">Ingresos totales que genera un cliente en toda su relación.<span class="gex"><b>Ej.</b> LTV de una clienta de Sofía: $97 reto + $600 mentoría = $697.</span></div></div>
+      <div class="gterm"><div class="gt">ROAS (Return On Ad Spend)</div><div class="gd">Dólares de venta por cada dólar en ads.<span class="gex"><b>Ej.</b> Marco invierte $5.000 y genera $20.000: ROAS 4x.</span></div></div>
+      <div class="gterm"><div class="gt">ROI (Return On Investment)</div><div class="gd">Retorno total sobre toda la inversión, no solo ads.</div></div>
+      <div class="gterm"><div class="gt">AOV (Average Order Value)</div><div class="gd">Ticket promedio por orden.</div></div>
+      <div class="gterm"><div class="gt">Conversion Rate</div><div class="gd">Porcentaje que pasa a la siguiente etapa.</div></div>
+      <div class="gterm"><div class="gt">CTR (Click-Through Rate)</div><div class="gd">Porcentaje de quienes ven algo y hacen clic.</div></div>
+      <div class="gterm"><div class="gt">Open Rate</div><div class="gd">Porcentaje de emails abiertos sobre enviados.</div></div>
+      <div class="gterm"><div class="gt">Bounce Rate</div><div class="gd">Porcentaje que se va sin interactuar.</div></div>
+      <div class="gterm"><div class="gt">Scroll Depth</div><div class="gd">Hasta dónde scrollea la gente en la landing.</div></div>
+      <div class="gterm"><div class="gt">Show-up Rate</div><div class="gd">Porcentaje de registrados que aparecen al webinar/llamada.</div></div>
+      <div class="gterm"><div class="gt">Ratio LTV:CAC</div><div class="gd">Cuántas veces vale el cliente vs lo que costó (sano 3:1+).<span class="gex"><b>Ej.</b> Sofía: LTV $697 / CAC $150 ≈ 4.6:1.</span></div></div>
+    </div>
+
+    <h2><span class="hn">→</span> Conexiones</h2>
+    <ul class="connect">
+      <li><b>Módulo 4 (Funnel):</b> cada métrica corresponde a una fase del funnel.</li>
+      <li><b>Módulo 6 (VSL):</b> true play rate / watch time / drop-off son métricas del VSL.</li>
+      <li><b>Módulo 3 (Oferta):</b> la conversión mide la fuerza de la oferta; el LTV depende de la escalera.</li>
+      <li><b>Módulo 8 (Tráfico/Stack):</b> el pixel y las herramientas capturan estas métricas; la atribución las conecta.</li>
+      <li><b><a href="diccionario.html" class="dlink">Diccionario</a>:</b> §11 (métricas y unit economics).</li>
+    </ul>
+  </div>
+
+  <!-- ============ PODCAST ============ -->
+  <div class="panel-view podcast" id="podcast">
+    <div class="pcover">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 2a4 4 0 0 0-4 4v6a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4z" fill="#fff"/><path d="M5 11v1a7 7 0 0 0 14 0v-1M12 19v3" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+      <div class="pwave"></div>
+    </div>
+    <h2>Las Métricas · Podcast</h2>
+    <div class="pmeta">Módulo 07 · Audio</div>
+
+    <audio id="pcAudio" controls preload="metadata" style="width:100%;max-width:480px">
+      <source src="audio/07.mp3" type="audio/mpeg">
+      Tu navegador no soporta audio.
+    </audio>
+    <div style="margin-top:16px">
+      <a id="pcDownload" href="audio/07.mp3" download="Modulo07_LasMétricas.mp3"
+         style="font-family:var(--exp);font-weight:700;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;border:1px solid var(--line);padding:10px 18px;display:inline-block">↓ Descargar el audio</a>
+    </div>
+
+    <div class="psetup">
+      <div class="pst">⚙ Audio del módulo</div>
+      <p>El audio se sirve desde la carpeta del sitio (<code>audio/07.mp3</code>). Dale play para escucharlo en streaming, o usa <b>↓ Descargar el audio</b> para guardarlo y oírlo offline.</p>
+    </div>
+
+    <div class="psummary">
+      <h3>En este episodio</h3>
+      <ul>
+        <li>Por qué "vendimos $47.000" no dice nada sin métricas: de anécdota a conocimiento accionable</li>
+        <li>Costo y retorno: CPL, CAC, CPA, ROAS y ROI —y por qué un ROAS alto puede esconder un negocio que no gana</li>
+        <li>Valor del cliente: AOV, LTV y el ratio LTV:CAC sano de 3:1, la relación que decide si el negocio vive o muere</li>
+        <li>Cómo la escalera de valor sube el LTV y te deja ganar la subasta del tráfico</li>
+        <li>Métricas por etapa (CTR, bounce, open, show-up) como radiografía: dónde exactamente se rompe el funnel</li>
+        <li>La obsesión sana: el que testea más rápido gana, y medir es el prerrequisito de mejorar</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============ VÍDEO ============ -->
+  <div class="panel-view video" id="video">
+    <div class="vhead">
+      <h2>Las Métricas · Vídeo</h2>
+      <div class="pmeta">Módulo 07 · Clase en vídeo</div>
+    </div>
+    <!-- EMBED AQUÍ: pegar <iframe> de YouTube/Vimeo cuando esté listo -->
+    <div class="video-embed" id="video-07">
+      <div class="vplaceholder">
+        <div class="vplay"><svg viewBox="0 0 24 24" fill="none"><path d="M6 4l14 8-14 8V4z" fill="#fff"/></svg></div>
+        <div class="vtext">Vídeo próximamente</div>
+        <div class="vsub">La clase en vídeo de este módulo se publicará aquí. Por ahora, estudia con la lección y el podcast.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ QUIZ ============ -->
+  <div class="panel-view quiz" id="quiz">
+    <div class="quiz-intro">
+      <h2>Valida lo aprendido</h2>
+      <p>12 preguntas en tres niveles: reconoces el término, entiendes el concepto y lo aplicas a un caso. Necesitas <b>70%</b> para aprobar el módulo.</p>
+      <div class="legend">
+        <span class="chip"><i>R</i>Recall</span><span class="chip"><i>C</i>Comprensión</span><span class="chip"><i>A</i>Aplicación</span>
+      </div>
+    </div>
+    <div class="qprog">
+      <div class="qpbar"><div class="qpfill" id="qpfill"></div></div>
+      <div class="qpmeta" id="qpmeta">0 / 12</div>
+    </div>
+    <div id="qhost"></div>
+    <div class="result" id="qresult"></div>
+    <div class="qfoot">
+      <span class="foot-msg" id="qmsg">Responde las 12 preguntas</span>
+      <div>
+        <button class="btn btn-ghost" onclick="resetQuiz()" id="qreset" style="display:none">Reintentar</button>
+        <button class="btn btn-primary" onclick="checkQuiz()" id="qbtn" disabled>Comprobar →</button>
+      </div>
+    </div>
+  </div>
+
+  <nav class="modnav">
+    <a href="modulo-06.html">← Módulo 06 · Anatomía del VSL</a>
+    <a href="modulo-08.html">Módulo 08 · Tráfico y Stack →</a>
+  </nav>
+
+  <footer>Afluence · Módulo 07 · Las Métricas · Nivel 1</footer>
+</div>
+
+<script>
+var Q=[
+ {t:'recall',q:"El <b>CPL (Cost Per Lead)</b> mide…",o:["Cuánto cuesta conseguir un cliente que paga","Cuánto cuesta conseguir un contacto (un email)","El ticket promedio por orden","Los dólares de venta por cada dólar en ads"],c:1,e:"CPL = inversión en ads ÷ leads. Es el costo por contacto, no por cliente."},
+ {t:'recall',q:"El <b>ROAS (Return On Ad Spend)</b> es…",o:["El retorno sobre toda la inversión, incluyendo equipo y herramientas","Cuántos dólares de venta genera cada dólar gastado en ads","El porcentaje de emails abiertos","El ticket promedio por compra"],c:1,e:"ROAS = ingresos por ads ÷ inversión en ads. Solo mira los ads, no el negocio completo."},
+ {t:'recall',q:"El <b>Show-up Rate</b> mide…",o:["Hasta dónde scrollea la gente en la landing","El porcentaje de registrados que efectivamente aparecen al webinar o a la llamada","El porcentaje de visitantes que se van sin interactuar","El ticket promedio por orden"],c:1,e:"Show-up Rate = registrados que aparecen. Registrarse no es asistir."},
+ {t:'recall',q:"El <b>Ratio LTV:CAC</b> se considera saludable cuando es…",o:["1:1 o menor","Exactamente 2:1","3:1 o más","Igual al ROAS"],c:2,e:"Un ratio sano es de al menos 3:1, para cubrir costos operativos y dejar margen."},
+ {t:'comp',q:"¿Por qué el <b>CAC</b> es siempre mayor que el <b>CPL</b>?",o:["Porque el CAC incluye el costo de las herramientas","Porque no todos los leads compran: necesitas varios leads para lograr un cliente","Porque el CPL incluye las comisiones del equipo","Porque el CAC se mide en otra moneda"],c:1,e:"El CPL es por contacto; el CAC por cliente que paga. Como no todos los leads compran, hace falta más inversión por cada cliente."},
+ {t:'comp',q:"¿Cómo puede un <b>ROAS alto</b> ocultar un negocio que no gana?",o:["Porque el ROAS mide solo los ads y deja fuera equipo, herramientas y comisiones que sí cuentan para el ROI","Porque el ROAS siempre está mal calculado","Porque el ROAS incluye demasiados costos operativos","Porque el ROAS y el ROI son lo mismo"],c:0,e:"El ROAS solo mira los ads; el ROI mira toda la inversión. Con costos operativos grandes, un ROAS de 4x puede convivir con un ROI mediocre."},
+ {t:'comp',q:"¿Por qué la relación <b>LTV &gt; CAC</b> decide si el negocio vive o muere?",o:["Porque si cada cliente vale más de lo que costó adquirirlo, ganas en cada venta; si no, comprar más tráfico te hunde más rápido","Porque el LTV siempre baja con el tiempo","Porque el CAC nunca cambia","Porque el LTV solo importa en high-ticket"],c:0,e:"Con LTV > CAC ganas en cada cliente y escalas; con LTV < CAC pierdes en cada venta y más tráfico solo acelera la pérdida."},
+ {t:'app',case:"Marco invierte $5.000 en anuncios para su reto de fitness y esos anuncios generan $20.000 en ventas.",q:"¿Cuál es el ROAS?",o:["0,25x","2x","4x","5x"],c:2,e:"ROAS = ingresos por ads ÷ inversión = $20.000 ÷ $5.000 = 4x."},
+ {t:'app',case:"Una clienta de Sofía compra el reto de $97 y, meses después, su mentoría de $600. Conseguir a esa clienta costó $150 de CAC.",q:"¿Cuál es su LTV y cómo luce el ratio LTV:CAC?",o:["LTV $97; ratio menor a 1:1 (insano)","LTV $697; ratio ≈ 4.6:1 (saludable, sobre 3:1)","LTV $600; ratio 1:1","LTV $150; ratio 3:1 exacto"],c:1,e:"LTV = $97 + $600 = $697. Ratio = 697 ÷ 150 ≈ 4.6:1, por encima del 3:1 sano."},
+ {t:'app',case:"Diego ve que muchísima gente entra a su landing del ebook, pero casi nadie deja su correo. El tráfico llega bien y el anuncio tiene buen CTR.",q:"¿Qué métrica delata el problema y dónde está?",o:["El ROAS; el problema está en los ads","El Bounce Rate alto; el problema está en la landing de captura o el lead magnet","El Show-up Rate; el problema está en el nurturing","El AOV; el problema está en el precio"],c:1,e:"Mucha visita pero pocos leads = bounce alto: la landing de captura o el lead magnet no convence de dejar los datos."},
+ {t:'app',case:"Renata vende un mastermind high-ticket. Su LTV por clienta es $4.000, así que puede pagar hasta $900 de CAC y aún ganar. Una competidora con un curso barato tiene LTV $250 y solo puede gastar $80 de CAC.",q:"<b>Reto.</b> ¿Qué ventaja le da a Renata su LTV alto y de dónde viene?",o:["Ninguna: gana quien tenga más seguidores","Puede pujar más alto por los mismos anuncios y ganar la subasta del tráfico; la ventaja viene de su escalera de valor, que sube el LTV","Le conviene bajar el precio para igualar a la competidora","El LTV alto solo sirve para reportería, no afecta la compra de tráfico"],c:1,e:"Un LTV alto (impulsado por la escalera de valor) deja pagar más por adquirir un cliente y aun así ganar: quien puede gastar más en CAC gana la subasta del tráfico."},
+ {t:'app',case:"En un lanzamiento de Lanza: 1.000 personas ven el anuncio, 30 entran a la landing (CTR 3%), 12 dejan su correo, pero al webinar solo aparecen 6 y de esos compran 0,6. El equipo quiere subir el presupuesto de ads para vender más.",q:"<b>Reto.</b> ¿Qué dicen las métricas por etapa y qué error evitarían?",o:["El embudo está sano; subir ads es lo correcto","Los show-up/open bajos apuntan al nurturing, no al tráfico: subir ads sería optimizar a ciegas el lugar equivocado","El problema es el CTR del anuncio, hay que cambiar el creativo","El problema es solo el precio de la oferta"],c:1,e:"De 12 leads solo 6 llegan a la oferta: el show-up/open delata un problema de nurturing. Subir ads (más tráfico) cuando el cuello está más abajo es optimizar a ciegas; las métricas por etapa evitan justo eso."}
+];
+</script>
+<script src="assets/afluence.js"></script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Módulo 08 · Tráfico y Stack — Afluence · Nivel 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800;900&family=Archivo+Expanded:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/afluence.css">
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <a href="index.html" title="Volver al índice">
+        <div class="logo"><svg viewBox="0 0 40 40" fill="none"><path d="M8 32 L24 6 L24 32 Z" fill="#111"/><path d="M24 32 L24 18 L33 32 Z" fill="#999"/><circle cx="11" cy="32" r="4" fill="#111"/></svg></div>
+        <div><div class="bn">Afluence</div><div class="bt">Building your empire</div></div>
+      </a>
+    </div>
+    <div class="eyebrow">Zero to Hero · Nivel 1 · Módulo 08</div>
+    <h1 class="title"><span class="out">Tráfico</span><span class="sol">y Stack.</span></h1>
+    <p class="lead"><b>El tráfico es cómo llega la gente al funnel —gratis o pagando— y el stack son las herramientas con que todo se construye y se mide.</b> Juntos son el "motor y el chasis" de la operación. Escúchalo, léelo, míralo y valida lo aprendido.</p>
+
+    <div class="tabs">
+      <button class="tab active" onclick="showTab('lesson',this)"><span class="n">A</span>Lección</button>
+      <button class="tab" onclick="showTab('podcast',this)"><span class="n">B</span>Podcast</button>
+      <button class="tab" onclick="showTab('video',this)"><span class="n">C</span>Vídeo</button>
+      <button class="tab" onclick="showTab('quiz',this)"><span class="n">D</span>Quiz</button>
+    </div>
+  </header>
+
+  <!-- ============ LECCIÓN ============ -->
+  <div class="panel-view lesson active" id="lesson">
+    <p class="intro">El <b>tráfico</b> es cómo llega la gente al funnel (<b>gratis o pagando</b>) y el <b>stack</b> son las herramientas con que todo se construye y se mide; juntos son el "motor y el chasis" de la operación.</p>
+
+    <div class="note"><b>Términos del diccionario que dominarás aquí:</b> §10 Tráfico (Tráfico orgánico, Tráfico pagado, Público frío/tibio/caliente, Pixel de Meta, Lookalike Audience, Retargeting, Campaign→Ad Set→Ad, Creativo, Follow Me Ads, UGC, Branded content, UTM, Atribución) · §12 Stack técnico (Hotmart, ClickFunnels, Kajabi, Systeme.io, GoHighLevel, Skool, MailerLite, ManyChat, Vidalytics, Meta Ads Manager).</div>
+
+    <h2><span class="hn">·</span> Por qué importa</h2>
+    <p>Sin tráfico, el mejor funnel del mundo vende cero —la atención es el primer factor de la fórmula del Módulo 1, y si es cero, todo el producto es cero—. Por eso entender de dónde viene la gente y cómo dirigirla es tan fundamental como saber qué venderle. Y todo ese tráfico, más todo el funnel, corre sobre herramientas concretas: si no sabes qué hace cada una, no puedes leer una conversación de equipo ("súbelo a Vidalytics y conéctalo al pixel") ni armar nada por tu cuenta.</p>
+    <p>La buena noticia, que ya vimos en el Módulo 1: nada de esto requiere programar. La parte técnica está resuelta por las herramientas. Lo valioso es saber <em>qué</em> herramienta usar para <em>qué</em> función, y cómo se conectan entre sí.</p>
+
+    <h2><span class="hn">01</span> Parte A — El tráfico</h2>
+
+    <h3>Las dos fuentes</h3>
+    <ul>
+      <li><b>Tráfico orgánico</b> — visitas que consigues sin pagar directamente por ellas: reels, historias, posts, SEO, recomendaciones. Es "gratis" en dinero, pero cuesta tiempo y consistencia.</li>
+      <li><b>Tráfico pagado (paid ads)</b> — visitas que consigues pagando publicidad. Cuesta dinero, pero es predecible y escalable: pones más presupuesto, llega más gente.</li>
+    </ul>
+
+    <h3>Las tres temperaturas del público</h3>
+    <p>Espejan el TOFU/MOFU/BOFU del funnel, pero desde la óptica del tráfico —es el mismo concepto de temperatura visto desde "a quién le muestro qué anuncio":</p>
+    <ul>
+      <li><b>Público frío</b> — no te conoce; hay que presentarse y generar interés desde cero. Es el más barato de alcanzar pero el más difícil de convertir.</li>
+      <li><b>Público tibio (templado)</b> — ya te vio o interactuó pero no compró; es la etapa de <b>retargeting</b>. Convierte mejor que el frío porque ya hay algo de conocimiento.</li>
+      <li><b>Público caliente</b> — listo para comprar; ya te conoce y confía. Es el más valioso y el que mejor convierte.</li>
+    </ul>
+
+    <h3>Cómo funciona la publicidad (Meta como ejemplo)</h3>
+    <ul>
+      <li><b>Campaign → Ad Set → Ad</b> — la estructura jerárquica de Meta Ads, en tres niveles: la <em>campaign</em> define el objetivo (ej. conseguir leads), el <em>ad set</em> define la audiencia y el presupuesto (a quién y con cuánto), y el <em>ad</em> es el anuncio concreto (el creativo). Entender esta jerarquía es básico para leer o armar cualquier campaña.</li>
+      <li><b>Creativo (creative)</b> — el video o la imagen del anuncio. Es lo que más mueve los resultados: un buen creativo sobre una audiencia mediocre supera a un creativo flojo sobre la mejor audiencia.</li>
+      <li><b>Pixel de Meta</b> — un fragmento de código que se instala en la web y registra qué hace la gente (visitó, dejó el correo, compró), devolviéndole esa información a Meta para que optimice las campañas y permita el retargeting. Es la columna vertebral de la medición del tráfico pagado —sin pixel, Meta optimiza a ciegas—.</li>
+      <li><b>Lookalike Audience</b> — una audiencia que Meta genera automáticamente, parecida a tus compradores actuales. Le dices "encuéntrame más gente como la que ya me compró" y Meta busca perfiles similares. Una de las herramientas más potentes del tráfico pagado.</li>
+      <li><b>Retargeting</b> — mostrar anuncios a quien ya pasó por tu funnel pero no compró (el público tibio). Es altamente rentable porque le hablas a gente que ya te conoce.</li>
+      <li><b>Follow Me Ads</b> — anuncios que dirigen al perfil orgánico del creador en lugar de a una landing; buscan ganar un seguidor o iniciar un DM, no una venta directa. Sirven para alimentar el orgánico con tráfico pagado —pagas para crecer la audiencia que luego monetizas orgánicamente—.</li>
+    </ul>
+
+    <h3>Tipos de creativo</h3>
+    <ul>
+      <li><b>UGC (User Generated Content)</b> — contenido tipo testimonio que parece hecho por un usuario real, no producido como marca. Suele convertir mejor justamente por su autenticidad: se siente como una recomendación de un par, no como un anuncio.</li>
+      <li><b>Branded content</b> — contenido con la estética y producción formal de una marca. Más pulido, pero a veces menos creíble que el UGC.</li>
+    </ul>
+
+    <h3>Medir de dónde viene la gente</h3>
+    <ul>
+      <li><b>UTM</b> — parámetros que se agregan a las URLs para trackear de dónde vino cada visita (de qué anuncio, de qué correo, de qué publicación). Sin UTMs, no sabes qué fuente trajo qué tráfico.</li>
+      <li><b>Atribución</b> — rastrear de qué pieza o canal vino una conversión. Es uno de los problemas más difíciles del sector: cuando alguien ve un reel, luego un anuncio, luego abre un correo y al final compra, ¿a quién le atribuyes la venta? Cuando la atribución falla, no sabes qué está funcionando de verdad, y por lo tanto no sabes qué escalar ni qué apagar.</li>
+    </ul>
+
+    <h2><span class="hn">02</span> Parte B — El stack técnico</h2>
+    <p>La forma correcta de pensar el stack no es "qué herramienta es mejor" sino "qué <b>función</b> necesito cubrir" —porque las marcas cambian, las funciones no—. Las herramientas del diccionario, agrupadas por función:</p>
+
+    <h3>Páginas y funnels</h3>
+    <ul>
+      <li><b>ClickFunnels</b> — software de embudos completos (landings, upsells, downsells, checkout); creado por Russell Brunson, el referente de funnels.</li>
+      <li><b>Systeme.io</b> — todo-en-uno con un plan gratuito robusto, muy popular en el mundo hispano por su accesibilidad.</li>
+    </ul>
+
+    <h3>Plataformas todo-en-uno</h3>
+    <ul>
+      <li><b>Kajabi</b> — todo-en-uno premium para cursos, membresías, email y páginas. Caro pero completo.</li>
+      <li><b>GoHighLevel (GHL)</b> — todo-en-uno enfocado en <b>agencias</b>: CRM + páginas + cursos + automatización + chat, pensado para operar muchos clientes desde una sola plataforma. Por eso es popular entre agencias como la ficticia "Lanza".</li>
+    </ul>
+
+    <h3>Producto, pago y comunidad</h3>
+    <ul>
+      <li><b>Hotmart</b> — marketplace + pasarela de pago dominante en LATAM para infoproductos: aloja el producto, cobra, gestiona afiliados, todo integrado.</li>
+      <li><b>Skool</b> — plataforma de comunidades de pago con gamificación nativa (niveles, puntos, ranking), muy usada para membresías.</li>
+    </ul>
+
+    <h3>Email y mensajería</h3>
+    <ul>
+      <li><b>MailerLite</b> — email marketing simple y accesible; secuencias y segmentación sin complicaciones. Buena puerta de entrada.</li>
+      <li><b>ManyChat</b> — automatización de DMs en Instagram y WhatsApp. El caso de uso clásico que ya mencionamos: "comenta una palabra clave en un reel → ManyChat envía automáticamente el enlace del lead magnet por DM".</li>
+    </ul>
+
+    <h3>Video y publicidad</h3>
+    <ul>
+      <li><b>Vidalytics</b> — hosting de VSL con analytics de drop-off y test A/B. Conecta directo con las métricas del Módulo 6: es donde ves en qué segundo abandona la gente tu VSL.</li>
+      <li><b>Meta Ads Manager</b> — el panel desde el que se crean y gestionan los anuncios en Instagram y Facebook.</li>
+    </ul>
+
+    <h2><span class="hn">03</span> Cómo se conectan tráfico + stack (el flujo)</h2>
+    <p>Las herramientas no viven aisladas; se encadenan siguiendo el funnel:</p>
+    <div class="mapbox">Meta Ads Manager (pagado) + Reels (orgánico)     ATENCIÓN
+        │                Follow Me Ads alimentan el perfil
+        ▼
+ManyChat → landing (ClickFunnels/Systeme)         CAPTURA
+        │
+        ▼
+MailerLite (emails) + comunidad                   NURTURING
+        │
+        ▼
+Landing de venta + VSL (Vidalytics)               CONVERSIÓN
+        │
+        ▼
+Hotmart (cobro) → Skool (entrega/comunidad)       ENTREGA
+        │
+   Pixel + UTM miden todo · Atribución lo conecta  MEDICIÓN</div>
+    <p>Cada herramienta opera una pieza o etapa del funnel, y el pixel más los UTMs atraviesan todo el recorrido midiendo. La atribución es la que intenta unir los puntos para decir "esta venta vino de aquí" —y es, como dijimos, lo más difícil de lograr bien—.</p>
+
+    <h2><span class="hn">⚠</span> Errores comunes del principiante</h2>
+    <ul>
+      <li><b>Creer que orgánico y pagado son excluyentes.</b> Se potencian: los follow me ads usan pago para alimentar el orgánico, y un orgánico fuerte baja el costo del pago. Los mejores operadores usan ambos.</li>
+      <li><b>Mismo mensaje a público frío y caliente.</b> Cada temperatura necesita su mensaje: al frío se le presenta, al caliente se le vende. Usar el mismo anuncio para ambos desperdicia presupuesto.</li>
+      <li><b>Ignorar el pixel.</b> Sin él, los anuncios se optimizan a ciegas y no hay retargeting posible. Instalarlo es lo primero, siempre.</li>
+      <li><b>Obsesionarse con la herramienta "perfecta".</b> Casi cualquier stack razonable funciona; la ejecución importa muchísimo más que la marca. Pasar semanas eligiendo entre dos herramientas equivalentes es tiempo perdido.</li>
+      <li><b>Pensar en marcas y no en funciones.</b> Quien aprende "necesito ManyChat" se queda obsoleto cuando ManyChat cambie; quien aprende "necesito algo que automatice DMs" entiende para siempre.</li>
+      <li><b>No resolver la atribución.</b> Si no sabes de qué fuente viene cada venta, no sabes qué escalar ni qué apagar —terminas invirtiendo más en lo que no funciona—.</li>
+    </ul>
+
+    <h2><span class="hn">★</span> Glosario del módulo</h2>
+    <div class="glossary">
+      <div class="gterm"><div class="gt">Tráfico orgánico</div><div class="gd">Visitas sin pagar (reels, stories, SEO).</div></div>
+      <div class="gterm"><div class="gt">Tráfico pagado</div><div class="gd">Visitas conseguidas pagando publicidad.</div></div>
+      <div class="gterm"><div class="gt">Público frío</div><div class="gd">No te conoce; vender desde cero.</div></div>
+      <div class="gterm"><div class="gt">Público tibio</div><div class="gd">Ya te vio, no compró; retargeting.</div></div>
+      <div class="gterm"><div class="gt">Público caliente</div><div class="gd">Listo para comprar; cierre.</div></div>
+      <div class="gterm"><div class="gt">Pixel de Meta</div><div class="gd">Código que mide visitas y permite retargeting y optimización.</div></div>
+      <div class="gterm"><div class="gt">Lookalike Audience</div><div class="gd">Audiencia parecida a tus compradores actuales.<span class="gex"><b>Ej.</b> Meta crea un lookalike de las compradoras de Sofía para buscar más como ellas.</span></div></div>
+      <div class="gterm"><div class="gt">Retargeting</div><div class="gd">Ads a quien pasó por el funnel y no compró.</div></div>
+      <div class="gterm"><div class="gt">Campaign → Ad Set → Ad</div><div class="gd">Estructura de Meta Ads: objetivo → audiencia → creativo.</div></div>
+      <div class="gterm"><div class="gt">Creativo</div><div class="gd">El video o imagen del ad; lo que más mueve resultados.</div></div>
+      <div class="gterm"><div class="gt">Follow Me Ads</div><div class="gd">Ads que llevan al perfil del creador, no a una landing.<span class="gex"><b>Ej.</b> Marco usa follow me ads para ganar seguidores antes de un lanzamiento.</span></div></div>
+      <div class="gterm"><div class="gt">UGC</div><div class="gd">Contenido tipo testimonio real de usuarios; convierte por autenticidad.</div></div>
+      <div class="gterm"><div class="gt">Branded content</div><div class="gd">Contenido con producción de marca formal.</div></div>
+      <div class="gterm"><div class="gt">UTM</div><div class="gd">Parámetros en URLs para trackear el origen de cada visita.</div></div>
+      <div class="gterm"><div class="gt">Atribución</div><div class="gd">Rastrear de qué pieza/canal vino una conversión.</div></div>
+      <div class="gterm"><div class="gt">Hotmart</div><div class="gd">Marketplace + pasarela dominante en LATAM.</div></div>
+      <div class="gterm"><div class="gt">ClickFunnels</div><div class="gd">Software de embudos completos (de Russell Brunson).</div></div>
+      <div class="gterm"><div class="gt">Kajabi</div><div class="gd">Todo-en-uno premium para cursos, membresías y email.</div></div>
+      <div class="gterm"><div class="gt">Systeme.io</div><div class="gd">Todo-en-uno con plan gratuito, popular en hispano.</div></div>
+      <div class="gterm"><div class="gt">GoHighLevel (GHL)</div><div class="gd">Todo-en-uno para agencias (CRM + páginas + chat).<span class="gex"><b>Ej.</b> "Lanza" opera a todos sus clientes desde GHL.</span></div></div>
+      <div class="gterm"><div class="gt">Skool</div><div class="gd">Comunidades de pago con gamificación.</div></div>
+      <div class="gterm"><div class="gt">MailerLite</div><div class="gd">Email marketing simple y accesible.</div></div>
+      <div class="gterm"><div class="gt">ManyChat</div><div class="gd">Automatización de DMs en IG y WhatsApp.<span class="gex"><b>Ej.</b> "Comenta AHORRO" → ManyChat manda el lead magnet de Sofía.</span></div></div>
+      <div class="gterm"><div class="gt">Vidalytics</div><div class="gd">Hosting de VSL con analytics de drop-off.</div></div>
+      <div class="gterm"><div class="gt">Meta Ads Manager</div><div class="gd">Panel para crear y gestionar ads en IG y Facebook.</div></div>
+    </div>
+
+    <h2><span class="hn">→</span> Conexiones</h2>
+    <ul class="connect">
+      <li><b>Módulo 1:</b> el tráfico es la palanca de "atención" de la fórmula del negocio.</li>
+      <li><b>Módulo 4 (Funnel):</b> las temperaturas del público espejan TOFU/MOFU/BOFU.</li>
+      <li><b>Módulo 7 (Métricas):</b> el pixel y los UTM capturan las métricas; la atribución las conecta.</li>
+      <li><b>Módulo 9 (Operación):</b> el closed loop es la atribución llevada a toda la cadena contenido→venta.</li>
+      <li><b><a href="diccionario.html" class="dlink">Diccionario</a>:</b> §10 (tráfico) y §12 (stack técnico).</li>
+    </ul>
+  </div>
+
+  <!-- ============ PODCAST ============ -->
+  <div class="panel-view podcast" id="podcast">
+    <div class="pcover">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 2a4 4 0 0 0-4 4v6a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4z" fill="#fff"/><path d="M5 11v1a7 7 0 0 0 14 0v-1M12 19v3" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+      <div class="pwave"></div>
+    </div>
+    <h2>Tráfico y Stack · Podcast</h2>
+    <div class="pmeta">Módulo 08 · Audio</div>
+
+    <audio id="pcAudio" controls preload="metadata" style="width:100%;max-width:480px">
+      <source src="audio/08.mp3" type="audio/mpeg">
+      Tu navegador no soporta audio.
+    </audio>
+    <div style="margin-top:16px">
+      <a id="pcDownload" href="audio/08.mp3" download="Modulo08_TráficoyStack.mp3"
+         style="font-family:var(--exp);font-weight:700;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;border:1px solid var(--line);padding:10px 18px;display:inline-block">↓ Descargar el audio</a>
+    </div>
+
+    <div class="psetup">
+      <div class="pst">⚙ Audio del módulo</div>
+      <p>El audio se sirve desde la carpeta del sitio (<code>audio/08.mp3</code>). Dale play para escucharlo en streaming, o usa <b>↓ Descargar el audio</b> para guardarlo y oírlo offline.</p>
+    </div>
+
+    <div class="psummary">
+      <h3>En este episodio</h3>
+      <ul>
+        <li>Las dos fuentes de tráfico —orgánico y pagado— y por qué se potencian en vez de competir</li>
+        <li>Las tres temperaturas del público (frío, tibio, caliente) y qué mensaje merece cada una</li>
+        <li>Cómo funciona la publicidad en Meta: Campaign → Ad Set → Ad, creativos, pixel, lookalikes y retargeting</li>
+        <li>El stack pensado por función y no por marca: páginas, todo-en-uno, pago, comunidad, email, video y ads</li>
+        <li>Cómo se encadenan las herramientas a lo largo del funnel, de la atención a la entrega</li>
+        <li>UTM, pixel y el problema difícil de la atribución: saber qué escalar y qué apagar</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============ VÍDEO ============ -->
+  <div class="panel-view video" id="video">
+    <div class="vhead">
+      <h2>Tráfico y Stack · Vídeo</h2>
+      <div class="pmeta">Módulo 08 · Clase en vídeo</div>
+    </div>
+    <!-- EMBED AQUÍ: pegar <iframe> de YouTube/Vimeo cuando esté listo -->
+    <div class="video-embed" id="video-08">
+      <div class="vplaceholder">
+        <div class="vplay"><svg viewBox="0 0 24 24" fill="none"><path d="M6 4l14 8-14 8V4z" fill="#fff"/></svg></div>
+        <div class="vtext">Vídeo próximamente</div>
+        <div class="vsub">La clase en vídeo de este módulo se publicará aquí. Por ahora, estudia con la lección y el podcast.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ QUIZ ============ -->
+  <div class="panel-view quiz" id="quiz">
+    <div class="quiz-intro">
+      <h2>Valida lo aprendido</h2>
+      <p>12 preguntas en tres niveles: reconoces el término, entiendes el concepto y lo aplicas a un caso. Necesitas <b>70%</b> para aprobar el módulo.</p>
+      <div class="legend">
+        <span class="chip"><i>R</i>Recall</span><span class="chip"><i>C</i>Comprensión</span><span class="chip"><i>A</i>Aplicación</span>
+      </div>
+    </div>
+    <div class="qprog">
+      <div class="qpbar"><div class="qpfill" id="qpfill"></div></div>
+      <div class="qpmeta" id="qpmeta">0 / 12</div>
+    </div>
+    <div id="qhost"></div>
+    <div class="result" id="qresult"></div>
+    <div class="qfoot">
+      <span class="foot-msg" id="qmsg">Responde las 12 preguntas</span>
+      <div>
+        <button class="btn btn-ghost" onclick="resetQuiz()" id="qreset" style="display:none">Reintentar</button>
+        <button class="btn btn-primary" onclick="checkQuiz()" id="qbtn" disabled>Comprobar →</button>
+      </div>
+    </div>
+  </div>
+
+  <nav class="modnav">
+    <a href="modulo-07.html">← Módulo 07 · Las Métricas</a>
+    <a href="modulo-09.html">Módulo 09 · Roles y Operación →</a>
+  </nav>
+
+  <footer>Afluence · Módulo 08 · Tráfico y Stack · Nivel 1</footer>
+</div>
+
+<script>
+var Q=[
+ {t:'recall',q:"El <b>tráfico orgánico</b> son…",o:["Visitas que consigues pagando publicidad","Visitas que consigues sin pagar directamente: reels, stories, SEO, recomendaciones","Las herramientas con que se construye el funnel","Un parámetro que se agrega a las URLs"],c:1,e:"Orgánico = visitas sin pagar (reels, stories, SEO). Es 'gratis' en dinero, pero cuesta tiempo y consistencia."},
+ {t:'recall',q:"El <b>Pixel de Meta</b> es…",o:["Un panel para crear anuncios en Instagram","Un fragmento de código que se instala en la web y registra qué hace la gente, devolviéndole esa info a Meta","Una audiencia parecida a tus compradores","Una plataforma de comunidades de pago"],c:1,e:"El pixel mide visitas, leads y compras y permite retargeting y optimización. Sin él, Meta optimiza a ciegas."},
+ {t:'recall',q:"Las <b>Follow Me Ads</b> son anuncios que…",o:["Dirigen al perfil orgánico del creador, no a una landing, para ganar un seguidor o un DM","Solo se muestran a quien ya compró","Cobran el producto dentro del propio anuncio","Miden el origen de cada visita"],c:0,e:"Las follow me ads llevan al perfil del creador (no a una landing): pagas para crecer la audiencia que luego monetizas orgánicamente."},
+ {t:'recall',q:"<b>Vidalytics</b> es una herramienta de…",o:["Email marketing simple y accesible","Hosting de VSL con analytics de drop-off y test A/B","Automatización de DMs en IG y WhatsApp","Marketplace y pasarela de pago"],c:1,e:"Vidalytics aloja la VSL y muestra en qué segundo abandona la gente; conecta con las métricas del Módulo 6."},
+ {t:'comp',q:"¿Por qué se dice que orgánico y pagado <b>se potencian</b> en vez de competir?",o:["Porque ambos cuestan exactamente lo mismo","Porque los follow me ads usan pago para alimentar el orgánico, y un orgánico fuerte baja el costo del pago","Porque solo se puede usar uno a la vez","Porque el pagado reemplaza al orgánico cuando hay presupuesto"],c:1,e:"No son excluyentes: el pago alimenta el orgánico (follow me ads) y un orgánico fuerte abarata el pago. Los mejores operadores usan ambos."},
+ {t:'comp',q:"¿Por qué la <b>atribución</b> es uno de los problemas más difíciles del sector?",o:["Porque las herramientas son carísimas","Porque alguien ve un reel, luego un anuncio, luego un correo y al final compra: ¿a quién se le atribuye la venta?","Porque el pixel está prohibido en LATAM","Porque el tráfico orgánico no se puede medir nunca"],c:1,e:"Un recorrido pasa por varias piezas y canales; saber de cuál vino la conversión es difícil. Si la atribución falla, no sabes qué escalar ni qué apagar."},
+ {t:'comp',q:"¿Por qué conviene pensar el stack por <b>función</b> y no por marca?",o:["Porque las marcas son siempre más baratas que las funciones","Porque las marcas cambian, pero las funciones no: quien aprende 'algo que automatice DMs' entiende para siempre","Porque una sola herramienta cubre todas las funciones","Porque la marca es lo único que mueve los resultados"],c:1,e:"Quien aprende 'necesito ManyChat' queda obsoleto cuando ManyChat cambie; quien aprende la función entiende para siempre."},
+ {t:'app',q:"Sofía ya tiene una base de compradoras de su reto 'Ordena tu plata' y quiere que Meta busque más gente con perfil similar para escalar.",case:"¿Qué herramienta del tráfico pagado describe esto?",o:["Retargeting","Lookalike Audience","Follow Me Ads","UTM"],c:1,e:"Un lookalike es la audiencia que Meta genera parecida a tus compradores actuales: 'encuéntrame más gente como la que ya me compró'."},
+ {t:'app',q:"Marco está armando una campaña en Meta: define el objetivo de conseguir leads, luego a quién mostrarlo y con cuánto presupuesto, y por último el video del anuncio.",case:"¿Qué tres niveles está configurando, en orden?",o:["Ad → Ad Set → Campaign","Campaign → Ad Set → Ad","Ad Set → Ad → Campaign","Campaign → Ad → Ad Set"],c:1,e:"La jerarquía de Meta es Campaign (objetivo) → Ad Set (audiencia y presupuesto) → Ad (el creativo)."},
+ {t:'app',q:"Diego graba un video que parece un testimonio real de un usuario contando su experiencia, sin estética de marca, para usarlo como anuncio.",case:"¿Qué tipo de creativo está usando y por qué suele convertir bien?",o:["Branded content; convierte por su producción pulida","UGC; convierte por su autenticidad, se siente como la recomendación de un par","Follow Me Ad; convierte porque lleva al perfil","Lookalike; convierte porque imita a los compradores"],c:1,e:"UGC (User Generated Content) parece hecho por un usuario real; convierte por autenticidad, no por producción de marca."},
+ {t:'app',q:"<b>Reto.</b> La agencia 'Lanza' opera a Sofía, Marco, Renata y Diego en paralelo y necesita una sola plataforma con CRM, páginas, cursos, automatización y chat para manejar a todos sus clientes desde un solo lugar.",case:"¿Qué herramienta del stack encaja mejor y por qué?",o:["Skool, porque es una comunidad de pago con gamificación","MailerLite, porque hace email marketing simple","GoHighLevel (GHL), porque es todo-en-uno enfocado en agencias para operar muchos clientes","Vidalytics, porque aloja las VSL de todos"],c:2,e:"GHL es el todo-en-uno pensado para agencias (CRM + páginas + cursos + automatización + chat), ideal para operar varios clientes desde una sola plataforma. Las otras cubren una función puntual, no toda la operación de agencia."},
+ {t:'app',q:"<b>Reto.</b> Renata invierte fuerte en anuncios fríos a público que no la conoce y, por ahorrar tiempo, decide no instalar el pixel y usar el mismo anuncio de venta directa para todos.",case:"¿Qué dos errores está cometiendo y qué consecuencia tienen?",o:["Ninguno: el público frío convierte igual que el caliente y el pixel es opcional","Ignorar el pixel (Meta optimiza a ciegas y no hay retargeting) y dar el mismo mensaje a frío y caliente (al frío hay que presentarse, no venderle directo)","Usar tráfico orgánico de más y olvidar el branded content","Confundir Campaign con Ad Set y no usar UTMs"],c:1,e:"Sin pixel, Meta optimiza a ciegas y no hay retargeting posible. Y cada temperatura necesita su mensaje: al frío se le presenta y al caliente se le vende; usar el mismo anuncio para ambos desperdicia presupuesto."}
+];
+</script>
+<script src="assets/afluence.js"></script>
+</body>
+</html>
