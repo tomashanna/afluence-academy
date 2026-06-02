@@ -1,8 +1,12 @@
-# Allowlist: ignorar TODO en la raíz y reincluir solo lo desplegable.
+# Allowlist: ignorar TODO en la raíz y reincluir solo lo desplegable del sitio.
 /*
 !/.gitignore
-!/sitio/
 !/DEPLOY.md
+!/index.html
+!/diccionario.html
+!/modulo-*.html
+!/assets/
+!/audio/
 
-# Basura del SO (también dentro de /sitio/)
+# Basura del SO (también dentro de subcarpetas)
 **/.DS_Store
