@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zero to Hero en Infoproductos · Nivel 1 — Afluence</title>
-<meta name="description" content="Nivel 1 (Beginner) del programa Zero to Hero en Infoproductos: entiende el terreno, habla el idioma y reconoce cada pieza del negocio. 11 módulos con lección, podcast, vídeo y quiz.">
+<title>Zero to Hero en Infoproductos · Nivel 1 · Afluence</title>
+<meta name="description" content="Nivel 1 (Beginner) del programa Zero to Hero en Infoproductos: entiende el terreno, habla el idioma y reconoce cada pieza del negocio. 11 módulos con lección, vídeo, podcast y quiz.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800;900&family=Archivo+Expanded:wght@500;600;700;800;900&display=swap" rel="stylesheet">
@@ -24,19 +24,6 @@
 .sec-h{font-family:var(--exp);font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--strong);margin-bottom:18px;padding-bottom:10px;border-bottom:1px solid var(--line);display:flex;align-items:baseline;gap:12px}
 .sec-h .hn{color:transparent;-webkit-text-stroke:1px #C2C2BD;font-size:22px}
 .sec p.intro{font-size:16px;color:var(--muted);margin-bottom:22px;max-width:600px}
-
-/* 3 niveles */
-.levels{display:grid;grid-template-columns:1fr 1fr 1fr;border:1px solid var(--line)}
-.level{padding:22px 20px;position:relative}
-.level:not(:last-child){border-right:1px solid var(--line)}
-.level .lv{font-family:var(--exp);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted2)}
-.level .ln{font-family:var(--exp);font-weight:900;font-size:22px;text-transform:uppercase;color:var(--strong);margin:8px 0 6px}
-.level .lq{font-size:13.5px;color:var(--muted);line-height:1.5}
-.level.here{background:var(--strong)}
-.level.here .lv,.level.here .lq{color:rgba(255,255,255,.6)}
-.level.here .ln{color:#fff}
-.level .badge{display:inline-block;font-family:var(--exp);font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--strong);background:#fff;padding:4px 9px;margin-top:12px}
-.level .soon{display:inline-block;font-family:var(--exp);font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted2);border:1px solid var(--line);padding:4px 9px;margin-top:12px}
 
 /* 11 módulos */
 .mods{border:1px solid var(--line)}
@@ -71,9 +58,15 @@
 .resumen .rdl a{font-family:var(--exp);font-weight:700;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;border:1px solid var(--line);padding:10px 18px;display:inline-block}
 .resumen .rdl a:hover{color:var(--strong);border-color:var(--strong)}
 
+/* progreso del alumno (badges escritos por el quiz de cada módulo) */
+.mod .mscore{font-family:var(--exp);font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--green);background:var(--greenBg);border:1px solid var(--green);padding:4px 8px;flex-shrink:0}
+.mod.done .mnum,.mod.done:hover .mnum{-webkit-text-stroke-color:var(--green)}
+.hprog{font-family:var(--exp);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:14px}
+.hprog b{color:var(--green)}
+
 @media(max-width:620px){
-  .levels,.how{grid-template-columns:1fr}
-  .levels .level:not(:last-child),.how .step:not(:last-child){border-right:none;border-bottom:1px solid var(--line)}
+  .how{grid-template-columns:1fr}
+  .how .step:not(:last-child){border-right:none;border-bottom:1px solid var(--line)}
   .mod .mnum{font-size:20px;width:34px}
 }
 </style>
@@ -92,7 +85,7 @@
     <div class="hero">
       <div class="sub">Zero to Hero en Infoproductos · Nivel 1</div>
       <h1><span class="out">Zero to</span><span class="sol">Hero.</span></h1>
-      <p class="lead"><b>Aprende a entender el negocio de los infoproductos desde cero.</b> El Nivel 1 cubre todo lo que hay que <em>saber</em>: qué es este mundo, cómo funciona, y cómo reconocer cada pieza. Once módulos, cada uno con lección, podcast, vídeo y un quiz para validar.</p>
+      <p class="lead"><b>Aprende a entender el negocio de los infoproductos desde cero.</b> El Nivel 1 cubre todo lo que hay que <em>saber</em>: qué es este mundo, cómo funciona, y cómo reconocer cada pieza. Once módulos, cada uno con lección, vídeo, podcast y un quiz para validar.</p>
       <div class="cta">
         <a class="btn btn-primary" href="modulo-01.html" style="text-decoration:none">Empezar por el Módulo 01 →</a>
         <a class="btn btn-ghost" href="#modulos" style="text-decoration:none">Ver los 11 módulos</a>
@@ -100,35 +93,9 @@
     </div>
   </header>
 
-  <!-- ===== EL PROGRAMA (3 niveles) ===== -->
-  <section class="sec">
-    <div class="sec-h"><span class="hn">01</span> El programa</div>
-    <p class="intro">Tres niveles, una progresión: primero entender, luego ejecutar, y al final decidir. Estás en el primero.</p>
-    <div class="levels">
-      <div class="level here">
-        <div class="lv">Nivel 1</div>
-        <div class="ln">Beginner</div>
-        <div class="lq">¿Qué <em>es</em> este mundo y cómo funciona? → Entiende el terreno y habla el idioma.</div>
-        <span class="badge">★ Estás aquí</span>
-      </div>
-      <div class="level">
-        <div class="lv">Nivel 2</div>
-        <div class="ln">Operador</div>
-        <div class="lq">¿Cómo se <em>ejecuta</em> un lanzamiento? → Sabe operar.</div>
-        <span class="soon">Próximamente</span>
-      </div>
-      <div class="level">
-        <div class="lv">Nivel 3</div>
-        <div class="ln">Estratega</div>
-        <div class="lq">¿<em>Qué</em> estrategia usar, cuándo y por qué? → Sabe decidir.</div>
-        <span class="soon">Próximamente</span>
-      </div>
-    </div>
-  </section>
-
   <!-- ===== LOS 11 MÓDULOS ===== -->
   <section class="sec" id="modulos">
-    <div class="sec-h"><span class="hn">02</span> Once módulos</div>
+    <div class="sec-h"><span class="hn">01</span> Once módulos</div>
     <p class="intro">Progresión de lo general a lo complejo. La columna vertebral del nivel es el diccionario de <b>181 términos</b>: completar los 11 módulos = dominar el diccionario completo.</p>
     <div style="margin:-6px 0 22px"><a class="btn btn-ghost" href="diccionario.html" style="text-decoration:none">Abrir el diccionario completo · 181 términos →</a></div>
     <div class="mods">
@@ -148,23 +115,23 @@
 
   <!-- ===== CÓMO SE APRENDE ===== -->
   <section class="sec">
-    <div class="sec-h"><span class="hn">03</span> Cómo se aprende</div>
-    <p class="intro">Cada módulo trae cuatro formas de estudiar el mismo contenido. Úsalas en el orden que prefieras y cierra siempre con el quiz.</p>
+    <div class="sec-h"><span class="hn">02</span> Cómo se aprende</div>
+    <p class="intro">Cada módulo trae cuatro formas de estudiar el mismo contenido. El orden sugerido: lee la lección, mira la clase, refuerza con el podcast y cierra siempre con el quiz.</p>
     <div class="how">
-      <div class="step">
-        <div class="si"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2a4 4 0 0 0-4 4v6a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4z" fill="#fff"/><path d="M5 11v1a7 7 0 0 0 14 0v-1M12 19v3" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></div>
-        <div class="sl">Escucha</div>
-        <div class="sd">El podcast del módulo, para aprender en cualquier momento.</div>
-      </div>
-      <div class="step">
-        <div class="si"><svg viewBox="0 0 24 24" fill="none"><path d="M5 4l14 8-14 8V4z" fill="#fff"/></svg></div>
-        <div class="sl">Mira</div>
-        <div class="sd">La clase en vídeo (próximamente en cada módulo).</div>
-      </div>
       <div class="step">
         <div class="si"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16M4 10h16M4 15h11" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></div>
         <div class="sl">Lee</div>
         <div class="sd">La lección completa, con glosario y ejemplos.</div>
+      </div>
+      <div class="step">
+        <div class="si"><svg viewBox="0 0 24 24" fill="none"><path d="M5 4l14 8-14 8V4z" fill="#fff"/></svg></div>
+        <div class="sl">Mira</div>
+        <div class="sd">La clase en vídeo del módulo, explicada paso a paso.</div>
+      </div>
+      <div class="step">
+        <div class="si"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2a4 4 0 0 0-4 4v6a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4z" fill="#fff"/><path d="M5 11v1a7 7 0 0 0 14 0v-1M12 19v3" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <div class="sl">Escucha</div>
+        <div class="sd">El podcast del módulo, para reforzar en cualquier momento.</div>
       </div>
       <div class="step">
         <div class="si"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
@@ -175,8 +142,8 @@
   </section>
 
   <!-- ===== RESUMEN DEL NIVEL 1 ===== -->
-  <section class="sec">
-    <div class="sec-h"><span class="hn">04</span> Resumen del Nivel 1</div>
+  <section class="sec" id="resumen">
+    <div class="sec-h"><span class="hn">03</span> Resumen del Nivel 1</div>
     <p class="intro">¿Terminaste los 11 módulos? Este audio repasa todo el nivel de un tirón: ideal para fijar el mapa completo antes de avanzar.</p>
     <div class="resumen">
       <div class="rcover"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2a4 4 0 0 0-4 4v6a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4z" fill="#fff"/><path d="M5 11v1a7 7 0 0 0 14 0v-1M12 19v3" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></div>
@@ -195,6 +162,33 @@
 
 <script>
   (function(){var s=document.querySelector('#resAudio source');var d=document.getElementById('resDownload');if(s&&d)d.href=s.src;})();
+  /* ---- progreso del alumno: lo escribe el quiz de cada módulo en localStorage ---- */
+  (function(){
+    var st;try{st=JSON.parse(localStorage.getItem('afl-n1-progress')||'{}');}catch(e){return;}
+    var mods=document.querySelectorAll('a.mod');var passed=0,firstPending=null;
+    Array.prototype.forEach.call(mods,function(a){
+      var m=(a.getAttribute('href').match(/modulo-(\d+)\.html/)||[])[1];if(!m)return;
+      var p=st[m];
+      if(p&&p.passed){
+        passed++;a.classList.add('done');
+        var b=document.createElement('span');b.className='mscore';b.textContent='✓ '+p.pct+'%';
+        a.insertBefore(b,a.querySelector('.marrow'));
+      }else if(!firstPending){firstPending={href:a.getAttribute('href'),num:m};}
+    });
+    if(!passed)return;
+    /* CTA: continuar donde quedaste (o nivel completado) */
+    var cta=document.querySelector('.cta .btn-primary');
+    if(cta){
+      if(firstPending){cta.textContent='Continuar: Módulo '+firstPending.num+' →';cta.setAttribute('href',firstPending.href);}
+      else{cta.textContent='Nivel 1 completado ✓ · Escucha el resumen';cta.setAttribute('href','#resumen');}
+    }
+    /* línea de progreso bajo el CTA + contador en la sección de módulos */
+    var hp=document.createElement('div');hp.className='hprog';
+    hp.innerHTML='<b>'+passed+'</b> de '+mods.length+' módulos aprobados';
+    var ctaBox=document.querySelector('.cta');if(ctaBox)ctaBox.insertAdjacentElement('afterend',hp);
+    var sh=document.querySelector('#modulos .sec-h');
+    if(sh){var sp=document.createElement('span');sp.style.cssText='margin-left:auto;font-size:11px;color:var(--green)';sp.textContent=passed+' / '+mods.length+' ✓';sh.appendChild(sp);}
+  })();
 </script>
 </body>
 </html>
