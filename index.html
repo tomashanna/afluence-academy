@@ -25,6 +25,19 @@
 .sec-h .hn{color:transparent;-webkit-text-stroke:1px #C2C2BD;font-size:22px}
 .sec p.intro{font-size:16px;color:var(--muted);margin-bottom:22px;max-width:600px}
 
+/* 3 niveles */
+.levels{display:grid;grid-template-columns:1fr 1fr 1fr;border:1px solid var(--line)}
+.level{padding:22px 20px;position:relative}
+.level:not(:last-child){border-right:1px solid var(--line)}
+.level .lv{font-family:var(--exp);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted2)}
+.level .ln{font-family:var(--exp);font-weight:900;font-size:22px;text-transform:uppercase;color:var(--strong);margin:8px 0 6px}
+.level .lq{font-size:13.5px;color:var(--muted);line-height:1.5}
+.level.here{background:var(--strong)}
+.level.here .lv,.level.here .lq{color:rgba(255,255,255,.6)}
+.level.here .ln{color:#fff}
+.level .badge{display:inline-block;font-family:var(--exp);font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--strong);background:#fff;padding:4px 9px;margin-top:12px}
+.level .soon{display:inline-block;font-family:var(--exp);font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted2);border:1px solid var(--line);padding:4px 9px;margin-top:12px}
+
 /* 11 módulos */
 .mods{border:1px solid var(--line)}
 .mod{display:flex;align-items:center;gap:18px;padding:17px 20px;border-bottom:1px solid var(--line);text-decoration:none;transition:background .15s}
@@ -93,9 +106,64 @@
     </div>
   </header>
 
+  <!-- ===== EL PROGRAMA (3 niveles) ===== -->
+  <section class="sec">
+    <div class="sec-h"><span class="hn">01</span> El programa</div>
+    <p class="intro">Zero to Hero es una formación por niveles: primero entiendes el negocio, luego aprendes a operarlo y al final a decidir la estrategia. Cada nivel construye sobre el anterior. Estás en el primero.</p>
+    <div class="levels">
+      <div class="level here">
+        <div class="lv">Nivel 1</div>
+        <div class="ln">Beginner</div>
+        <div class="lq">¿Qué <em>es</em> este mundo y cómo funciona? → Entiende el terreno y habla el idioma.</div>
+        <span class="badge">★ Estás aquí</span>
+      </div>
+      <div class="level">
+        <div class="lv">Nivel 2</div>
+        <div class="ln">Operador</div>
+        <div class="lq">¿Cómo se <em>ejecuta</em> un lanzamiento? → Sabe operar.</div>
+        <span class="soon">Próximamente</span>
+      </div>
+      <div class="level">
+        <div class="lv">Nivel 3</div>
+        <div class="ln">Estratega</div>
+        <div class="lq">¿<em>Qué</em> estrategia usar, cuándo y por qué? → Sabe decidir.</div>
+        <span class="soon">Próximamente</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CÓMO SE APRENDE ===== -->
+  <section class="sec">
+    <div class="sec-h"><span class="hn">02</span> Cómo se aprende</div>
+    <p class="intro">Cada módulo entrega el mismo contenido en tres formatos y se cierra con una validación. El orden sugerido: lee la lección completa, mira la clase en vídeo y profundiza con el podcast. Cuando lo tengas claro, valida todo tu conocimiento con el quiz.</p>
+    <div class="how">
+      <div class="step">
+        <div class="si"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16M4 10h16M4 15h11" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <div class="sl">1 · Lee</div>
+        <div class="sd">La lección completa del módulo, con ejemplos y los términos del diccionario que vas a dominar.</div>
+      </div>
+      <div class="step">
+        <div class="si"><svg viewBox="0 0 24 24" fill="none"><path d="M5 4l14 8-14 8V4z" fill="#fff"/></svg></div>
+        <div class="sl">2 · Mira</div>
+        <div class="sd">La clase en vídeo, que explica el módulo paso a paso.</div>
+      </div>
+      <div class="step">
+        <div class="si"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2a4 4 0 0 0-4 4v6a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4z" fill="#fff"/><path d="M5 11v1a7 7 0 0 0 14 0v-1M12 19v3" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <div class="sl">3 · Escucha</div>
+        <div class="sd">El podcast del módulo, para profundizar y repasar en cualquier momento.</div>
+      </div>
+      <div class="step">
+        <div class="si"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="sl">4 · Valida</div>
+        <div class="sd">El quiz de 12 preguntas. Con 70% o más apruebas el módulo y desbloqueas el botón al siguiente.</div>
+      </div>
+    </div>
+    <div class="note" style="margin-top:18px"><b>Tu avance queda guardado en este navegador.</b> Cada módulo aprobado se marca abajo con su nota, el botón principal pasa a "Continuar donde quedaste", y puedes reintentar cualquier quiz las veces que quieras: siempre se guarda tu mejor nota.</div>
+  </section>
+
   <!-- ===== LOS 11 MÓDULOS ===== -->
   <section class="sec" id="modulos">
-    <div class="sec-h"><span class="hn">01</span> Once módulos</div>
+    <div class="sec-h"><span class="hn">03</span> Once módulos</div>
     <p class="intro">Progresión de lo general a lo complejo. La columna vertebral del nivel es el diccionario de <b>181 términos</b>: completar los 11 módulos = dominar el diccionario completo.</p>
     <div style="margin:-6px 0 22px"><a class="btn btn-ghost" href="diccionario.html" style="text-decoration:none">Abrir el diccionario completo · 181 términos →</a></div>
     <div class="mods">
@@ -113,37 +181,9 @@
     </div>
   </section>
 
-  <!-- ===== CÓMO SE APRENDE ===== -->
-  <section class="sec">
-    <div class="sec-h"><span class="hn">02</span> Cómo se aprende</div>
-    <p class="intro">Cada módulo trae cuatro formas de estudiar el mismo contenido. El orden sugerido: lee la lección, mira la clase, refuerza con el podcast y cierra siempre con el quiz.</p>
-    <div class="how">
-      <div class="step">
-        <div class="si"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16M4 10h16M4 15h11" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></div>
-        <div class="sl">Lee</div>
-        <div class="sd">La lección completa, con glosario y ejemplos.</div>
-      </div>
-      <div class="step">
-        <div class="si"><svg viewBox="0 0 24 24" fill="none"><path d="M5 4l14 8-14 8V4z" fill="#fff"/></svg></div>
-        <div class="sl">Mira</div>
-        <div class="sd">La clase en vídeo del módulo, explicada paso a paso.</div>
-      </div>
-      <div class="step">
-        <div class="si"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2a4 4 0 0 0-4 4v6a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4z" fill="#fff"/><path d="M5 11v1a7 7 0 0 0 14 0v-1M12 19v3" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></div>
-        <div class="sl">Escucha</div>
-        <div class="sd">El podcast del módulo, para reforzar en cualquier momento.</div>
-      </div>
-      <div class="step">
-        <div class="si"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <div class="sl">Valida</div>
-        <div class="sd">Un quiz de 12 preguntas; 70% para aprobar el módulo.</div>
-      </div>
-    </div>
-  </section>
-
   <!-- ===== RESUMEN DEL NIVEL 1 ===== -->
   <section class="sec" id="resumen">
-    <div class="sec-h"><span class="hn">03</span> Resumen del Nivel 1</div>
+    <div class="sec-h"><span class="hn">04</span> Resumen del Nivel 1</div>
     <p class="intro">¿Terminaste los 11 módulos? Este audio repasa todo el nivel de un tirón: ideal para fijar el mapa completo antes de avanzar.</p>
     <div class="resumen">
       <div class="rcover"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2a4 4 0 0 0-4 4v6a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4z" fill="#fff"/><path d="M5 11v1a7 7 0 0 0 14 0v-1M12 19v3" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></div>
