@@ -201,19 +201,19 @@
   <div class="panel-view quiz" id="quiz">
     <div class="quiz-intro">
       <h2>Valida lo aprendido</h2>
-      <p>12 preguntas en tres niveles: reconoces el término, entiendes el concepto y lo aplicas a un caso. Necesitas <b>70%</b> para aprobar el módulo.</p>
+      <p>14 preguntas en tres niveles: reconoces el término, entiendes el concepto y lo aplicas a un caso. Necesitas <b>70%</b> para aprobar el módulo.</p>
       <div class="legend">
         <span class="chip"><i>R</i>Recall</span><span class="chip"><i>C</i>Comprensión</span><span class="chip"><i>A</i>Aplicación</span>
       </div>
     </div>
     <div class="qprog">
       <div class="qpbar"><div class="qpfill" id="qpfill"></div></div>
-      <div class="qpmeta" id="qpmeta">0 / 12</div>
+      <div class="qpmeta" id="qpmeta">0 / 14</div>
     </div>
     <div id="qhost"></div>
     <div class="result" id="qresult"></div>
     <div class="qfoot">
-      <span class="foot-msg" id="qmsg">Responde las 12 preguntas</span>
+      <span class="foot-msg" id="qmsg">Responde las 14 preguntas</span>
       <div>
         <button class="btn btn-ghost" onclick="resetQuiz()" id="qreset" style="display:none">Reintentar</button>
         <button class="btn btn-primary" onclick="checkQuiz()" id="qbtn" disabled>Comprobar →</button>
@@ -242,7 +242,9 @@ var Q=[
  {t:'app',q:"En la mentoría de Sofía, el setter IA cualifica y agenda, pero muchos agendados no aparecen a la llamada: el show-up rate es bajo.",case:"¿Dónde está el problema y qué módulo lo cubre?",o:["En la oferta y el precio (M3)","En el nurturing y los recordatorios: agendan y no aparecen (M4)","En el creativo del anuncio (M8)","En el mecanismo único del VSL (M6)"],c:1,e:"Show-up rate bajo señala fallo de nurturing/recordatorios: la gente agenda y no aparece (M4)."},
  {t:'app',q:"Diego quiere diseccionar el lanzamiento de un referente de su nicho para aprender qué lo hace funcionar, punto por punto.",case:"Diego (productividad/IA, 120K) quiere una herramienta sistemática.",o:["La fórmula del ROAS","La checklist de 11 puntos (funnel hacking)","Un acuerdo de palabra","El proof stack"],c:1,e:"La checklist de 11 puntos es la herramienta de funnel hacking: un punto por módulo para diseccionar cualquier lanzamiento."},
  {t:'app',q:"<b>Reto.</b> El VSL de Renata: la gente llega a la sales call pero no cierra, y además el drop-off del VSL se dispara al minuto 2.",case:"Renata pide ayuda para no 'arreglar la pieza equivocada'. ¿Qué dos diagnósticos son correctos a la vez?",o:["Ambos problemas son de tráfico: comprar más ads","No cierran → oferta/precio/closer (M3, M9); drop-off al min 2 → hook o apertura del guion (M6)","No cierran → la application page (M5); drop-off → el nurturing (M4)","Ambos son del closed loop (M9)"],c:1,e:"Cada síntoma apunta a su pieza: no cerrar en la llamada = oferta/precio/closer (M3, M9); drop-off al minuto 2 = hook/apertura del guion (M6). El error sería tocar el tráfico cuando el problema está en cierre y guion."},
- {t:'app',q:"<b>Reto.</b> Marco y su competidor venden cursos de fitness casi idénticos; Marco factura decenas de veces más. Un colega concluye: 'Marco gana porque su curso es mucho mejor'.",case:"Aplica la lección del Caso 2 para corregir el diagnóstico.",o:["El colega tiene razón: el producto es el diferenciador","Se equivoca: el producto rara vez es el diferenciador; Marco movió todas las palancas (atención, captura, oferta, testing, escalera) y al multiplicarse dan 50×","Se equivoca: lo único que importa es el precio","Tiene razón a medias: importa el producto y la suerte"],c:1,e:"Atribuir el éxito al producto es un error clásico. Marco gana por la suma de palancas bien operadas y su velocidad de testing; como la fórmula multiplica, la ventaja se compone hasta 50×."}
+ {t:'app',q:"<b>Reto.</b> Marco y su competidor venden cursos de fitness casi idénticos; Marco factura decenas de veces más. Un colega concluye: 'Marco gana porque su curso es mucho mejor'.",case:"Aplica la lección del Caso 2 para corregir el diagnóstico.",o:["El colega tiene razón: el producto es el diferenciador","Se equivoca: el producto rara vez es el diferenciador; Marco movió todas las palancas (atención, captura, oferta, testing, escalera) y al multiplicarse dan 50×","Se equivoca: lo único que importa es el precio","Tiene razón a medias: importa el producto y la suerte"],c:1,e:"Atribuir el éxito al producto es un error clásico. Marco gana por la suma de palancas bien operadas y su velocidad de testing; como la fórmula multiplica, la ventaja se compone hasta 50×."},
+ {t:'app',q:"En su lanzamiento de mentoría, Sofía mide que cada clienta le deja un <b>LTV</b> de $697 y que captar a cada una le cuesta un <b>CAC</b> de $150. Su socio dice que el negocio 'apenas se sostiene' porque el reto de entrada deja poco margen.",case:"Sofía quiere saber si su unidad de negocio es sana. ¿Qué le dicen los números?",o:["El negocio es insano: el CAC de $150 se come casi toda la ganancia","El ratio LTV:CAC es de aproximadamente 4.6:1, claramente sano: recupera muchas veces lo que invierte en captar","No se puede saber sin conocer el ROAS de los ads","El reto debería costar más de $150 para cubrir el CAC"],c:1,e:"La salud no se juzga por el margen del producto de entrada, sino por el ratio LTV:CAC de la escalera completa: $697 / $150 da aproximadamente 4.6:1, muy por encima del umbral sano. Que el reto deje poco margen no condena al negocio si la relación entre lo que vale una clienta y lo que cuesta captarla es tan favorable."},
+ {t:'app',q:"Diego (productividad/IA, 120K seguidores) ve a un referente con 1,5 millones de seguidores lanzar sin landing de captura ni nurturing: anuncia el carrito en una sola story y vende muchísimo. Diego quiere copiar esa táctica tal cual en su próximo lanzamiento.",case:"Aplica los errores comunes del módulo. ¿Qué le adviertes a Diego?",o:["Adelante: si funcionó para el referente, funcionará igual para Diego","Cuidado: copiar la táctica sin el contexto es un error; con una base de atención y confianza mucho menor, ese atajo puede fracasar para Diego","Da igual el contexto: lo único que importa es el precio del producto","El error del referente es no tener landing, así que Diego hace bien en agregarla"],c:1,e:"Lo que funciona con 1,5 millones de seguidores se apoya en una base de atención y confianza enorme que perdona saltarse la captura y el nurturing. Copiar la táctica sin ese contexto es uno de los errores clásicos: con 120K, Diego necesita esas piezas para no perder el tráfico."}
 ];
 </script>
 <script src="assets/afluence.js"></script>

@@ -214,19 +214,19 @@
   <div class="panel-view quiz" id="quiz">
     <div class="quiz-intro">
       <h2>Valida lo aprendido</h2>
-      <p>12 preguntas en tres niveles: reconoces el término, entiendes el concepto y lo aplicas a un caso. Necesitas <b>70%</b> para aprobar el módulo.</p>
+      <p>14 preguntas en tres niveles: reconoces el término, entiendes el concepto y lo aplicas a un caso. Necesitas <b>70%</b> para aprobar el módulo.</p>
       <div class="legend">
         <span class="chip"><i>R</i>Recall</span><span class="chip"><i>C</i>Comprensión</span><span class="chip"><i>A</i>Aplicación</span>
       </div>
     </div>
     <div class="qprog">
       <div class="qpbar"><div class="qpfill" id="qpfill"></div></div>
-      <div class="qpmeta" id="qpmeta">0 / 12</div>
+      <div class="qpmeta" id="qpmeta">0 / 14</div>
     </div>
     <div id="qhost"></div>
     <div class="result" id="qresult"></div>
     <div class="qfoot">
-      <span class="foot-msg" id="qmsg">Responde las 12 preguntas</span>
+      <span class="foot-msg" id="qmsg">Responde las 14 preguntas</span>
       <div>
         <button class="btn btn-ghost" onclick="resetQuiz()" id="qreset" style="display:none">Reintentar</button>
         <button class="btn btn-primary" onclick="checkQuiz()" id="qbtn" disabled>Comprobar →</button>
@@ -255,7 +255,9 @@ var Q=[
  {t:'app',q:"Renata brilla en vivo, tiene 80K seguidores muy comprometidos y quiere el máximo ticket aprovechando su fortaleza.",case:"¿Qué producto y qué lanzamiento le encajan?",o:["Curso grabado masivo lanzado como Evergreen","Mastermind lanzado como High Ticket Launch (aplicación + llamada)","Tripwire de $17 lanzado como VSL","Membresía lanzada como Seed Launch"],c:1,e:"Su fortaleza es el vivo y su audiencia es chica pero fiel: mastermind high-ticket con aplicación + llamada aprovecha eso."},
  {t:'app',q:"Diego está en nicho técnico (productividad/IA) y ya tiene un ebook y un curso; quiere dar el siguiente salto de formato.",case:"¿Qué evolución de producto propone el módulo para su perfil?",o:["Pasar a mentoría 1:1 financiera","Lanzar su propia app/SaaS de productividad como producto principal","Abrir un mastermind de oratoria","Convertir el curso en un lead magnet gratuito"],c:1,e:"Para el nicho técnico el módulo sugiere ebook → curso → app/SaaS: Diego puede lanzar su app de productividad."},
  {t:'app',q:"<b>Reto.</b> Sofía quiere convertir desconocidos en compradores y, al mismo tiempo, distingue entre el regalo que pide email, el regalo que solo genera confianza y la primera venta barata.",case:"Ordena las tres piezas por su función en el embudo (de menos a más compromiso).",o:["Tripwire → recurso → lead magnet","Lead magnet (pide email) → recurso (genera confianza sin pedir nada) → tripwire (primera venta $7 a $47)","Recurso → tripwire → lead magnet","Lead magnet → tripwire → recurso"],c:1,e:"Confundirlos es un error clásico. El lead magnet busca el email; el recurso abre conversación sin pedir nada; el tripwire ya cobra (poco) para convertir en comprador."},
- {t:'app',q:"<b>Reto.</b> Una agencia presenta un mastermind a $5.000 como 'el mejor negocio' solo porque el ticket es altísimo, sin mirar nada más.",case:"¿Qué error está cometiendo y qué debería revisar antes?",o:["Ninguno: a mayor ticket, siempre mejor negocio","Ignora el costo de entrega; debe calcular las horas semanales que consume, porque ticket alto no siempre significa mejor negocio","El error es no haberlo lanzado como Evergreen","El error es no usar un lead magnet primero"],c:1,e:"El ticket alto no equivale a mejor negocio: un mastermind consume muchas horas y la tarifa por hora puede salir baja. Hay que mirar el costo de entrega, no solo el precio."}
+ {t:'app',q:"<b>Reto.</b> Una agencia presenta un mastermind a $5.000 como 'el mejor negocio' solo porque el ticket es altísimo, sin mirar nada más.",case:"¿Qué error está cometiendo y qué debería revisar antes?",o:["Ninguno: a mayor ticket, siempre mejor negocio","Ignora el costo de entrega; debe calcular las horas semanales que consume, porque ticket alto no siempre significa mejor negocio","El error es no haberlo lanzado como Evergreen","El error es no usar un lead magnet primero"],c:1,e:"El ticket alto no equivale a mejor negocio: un mastermind consume muchas horas y la tarifa por hora puede salir baja. Hay que mirar el costo de entrega, no solo el precio."},
+ {t:'app',q:"Marco ya validó su <b>comunidad de pago</b> mensual y la vende sin problema: mes a mes entran nuevos miembros. Pero al revisar los números nota que muchos se dan de baja al segundo o tercer mes.",case:"Según el módulo, ¿dónde está el verdadero juego de la membresía y qué debería priorizar Marco?",o:["Captar más miembros nuevos cada mes, porque vender la suscripción es lo difícil","La retención: entregar valor continuo para que no se den de baja, porque vender es fácil y lograr que se queden es el reto real","Subir el precio mensual para compensar las bajas","Cerrar la comunidad y reemplazarla por un curso grabado evergreen"],c:1,e:"En una membresía vender la suscripción es lo fácil; el verdadero juego es la retención. Si la gente se da de baja al segundo mes, el ingreso recurrente se desarma, así que Marco debe enfocarse en entregar valor continuo, no solo en captar."},
+ {t:'app',q:"Una creadora que trabaja con la agencia <b>Lanza</b> tiene una idea de programa pero todavía no construyó nada y no sabe si su audiencia lo comprará. Quiere arriesgar lo mínimo antes de invertir semanas produciendo.",case:"¿Qué tipo de lanzamiento le recomienda el módulo para esta situación y por qué?",o:["Un Evergreen Funnel, para vender 24/7 desde el primer día sin depender de fechas","Un Seed Launch a un grupo de 6 a 100 personas: vende primero y construye después con el feedback de quienes pagaron, validando con riesgo mínimo","Un External / JV Launch, para que los afiliados aporten audiencia y amplíen el alcance de inmediato","Un High Ticket Launch con aplicación y llamada, para filtrar solo prospectos premium"],c:1,e:"El Seed Launch es el primer paso de quien aún no tiene producto: se vende a un grupo chico (6 a 100) para validar la idea y construir el producto con el feedback de la gente real que pagó. Es lo opuesto a producir todo a ciegas o a escalar antes de validar."}
 ];
 </script>
 <script src="assets/afluence.js"></script>

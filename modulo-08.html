@@ -235,19 +235,19 @@ Hotmart (cobro) → Skool (entrega/comunidad)       ENTREGA
   <div class="panel-view quiz" id="quiz">
     <div class="quiz-intro">
       <h2>Valida lo aprendido</h2>
-      <p>12 preguntas en tres niveles: reconoces el término, entiendes el concepto y lo aplicas a un caso. Necesitas <b>70%</b> para aprobar el módulo.</p>
+      <p>14 preguntas en tres niveles: reconoces el término, entiendes el concepto y lo aplicas a un caso. Necesitas <b>70%</b> para aprobar el módulo.</p>
       <div class="legend">
         <span class="chip"><i>R</i>Recall</span><span class="chip"><i>C</i>Comprensión</span><span class="chip"><i>A</i>Aplicación</span>
       </div>
     </div>
     <div class="qprog">
       <div class="qpbar"><div class="qpfill" id="qpfill"></div></div>
-      <div class="qpmeta" id="qpmeta">0 / 12</div>
+      <div class="qpmeta" id="qpmeta">0 / 14</div>
     </div>
     <div id="qhost"></div>
     <div class="result" id="qresult"></div>
     <div class="qfoot">
-      <span class="foot-msg" id="qmsg">Responde las 12 preguntas</span>
+      <span class="foot-msg" id="qmsg">Responde las 14 preguntas</span>
       <div>
         <button class="btn btn-ghost" onclick="resetQuiz()" id="qreset" style="display:none">Reintentar</button>
         <button class="btn btn-primary" onclick="checkQuiz()" id="qbtn" disabled>Comprobar →</button>
@@ -276,7 +276,9 @@ var Q=[
  {t:'app',q:"Marco está armando una campaña en Meta: define el objetivo de conseguir leads, luego a quién mostrarlo y con cuánto presupuesto, y por último el video del anuncio.",case:"¿Qué tres niveles está configurando, en orden?",o:["Ad → Ad Set → Campaign","Campaign → Ad Set → Ad","Ad Set → Ad → Campaign","Campaign → Ad → Ad Set"],c:1,e:"La jerarquía de Meta es Campaign (objetivo) → Ad Set (audiencia y presupuesto) → Ad (el creativo)."},
  {t:'app',q:"Diego graba un video que parece un testimonio real de un usuario contando su experiencia, sin estética de marca, para usarlo como anuncio.",case:"¿Qué tipo de creativo está usando y por qué suele convertir bien?",o:["Branded content; convierte por su producción pulida","UGC; convierte por su autenticidad, se siente como la recomendación de un par","Follow Me Ad; convierte porque lleva al perfil","Lookalike; convierte porque imita a los compradores"],c:1,e:"UGC (User Generated Content) parece hecho por un usuario real; convierte por autenticidad, no por producción de marca."},
  {t:'app',q:"<b>Reto.</b> La agencia 'Lanza' opera a Sofía, Marco, Renata y Diego en paralelo y necesita una sola plataforma con CRM, páginas, cursos, automatización y chat para manejar a todos sus clientes desde un solo lugar.",case:"¿Qué herramienta del stack encaja mejor y por qué?",o:["Skool, porque es una comunidad de pago con gamificación","MailerLite, porque hace email marketing simple","GoHighLevel (GHL), porque es todo-en-uno enfocado en agencias para operar muchos clientes","Vidalytics, porque aloja las VSL de todos"],c:2,e:"GHL es el todo-en-uno pensado para agencias (CRM + páginas + cursos + automatización + chat), ideal para operar varios clientes desde una sola plataforma. Las otras cubren una función puntual, no toda la operación de agencia."},
- {t:'app',q:"<b>Reto.</b> Renata invierte fuerte en anuncios fríos a público que no la conoce y, por ahorrar tiempo, decide no instalar el pixel y usar el mismo anuncio de venta directa para todos.",case:"¿Qué dos errores está cometiendo y qué consecuencia tienen?",o:["Ninguno: el público frío convierte igual que el caliente y el pixel es opcional","Ignorar el pixel (Meta optimiza a ciegas y no hay retargeting) y dar el mismo mensaje a frío y caliente (al frío hay que presentarse, no venderle directo)","Usar tráfico orgánico de más y olvidar el branded content","Confundir Campaign con Ad Set y no usar UTMs"],c:1,e:"Sin pixel, Meta optimiza a ciegas y no hay retargeting posible. Y cada temperatura necesita su mensaje: al frío se le presenta y al caliente se le vende; usar el mismo anuncio para ambos desperdicia presupuesto."}
+ {t:'app',q:"<b>Reto.</b> Renata invierte fuerte en anuncios fríos a público que no la conoce y, por ahorrar tiempo, decide no instalar el pixel y usar el mismo anuncio de venta directa para todos.",case:"¿Qué dos errores está cometiendo y qué consecuencia tienen?",o:["Ninguno: el público frío convierte igual que el caliente y el pixel es opcional","Ignorar el pixel (Meta optimiza a ciegas y no hay retargeting) y dar el mismo mensaje a frío y caliente (al frío hay que presentarse, no venderle directo)","Usar tráfico orgánico de más y olvidar el branded content","Confundir Campaign con Ad Set y no usar UTMs"],c:1,e:"Sin pixel, Meta optimiza a ciegas y no hay retargeting posible. Y cada temperatura necesita su mensaje: al frío se le presenta y al caliente se le vende; usar el mismo anuncio para ambos desperdicia presupuesto."},
+ {t:'app',q:"Marco lanzó su reto de 7 días con anuncios a público frío. Mira sus datos y ve que <b>3.400 personas</b> visitaron la página de inscripción pero no dejaron el correo, así que prepara una campaña dirigida solo a ese grupo, recordándoles el reto.",case:"¿Qué táctica del tráfico pagado está aplicando Marco y a qué temperatura de público le habla?",o:["Lookalike Audience a público frío, porque busca gente nueva parecida","Retargeting a público tibio, porque le habla a quien ya pasó por el funnel y no convirtió","Follow Me Ads a público caliente, porque ya lo conocen y confían","Branded content a público frío, para presentar la marca desde cero"],c:1,e:"Quien ya te vio o interactuó pero no compró es público tibio, y mostrarle anuncios para que vuelva es retargeting. Convierte mejor que el frío porque ya hay algo de conocimiento, por eso es tan rentable."},
+ {t:'app',q:"Sofía publica un reel donde dice: 'Comenta la palabra AHORRO y te mando gratis mi guía para salir de deudas'. Quiere que, en cuanto alguien comente, le llegue el enlace de la guía por mensaje directo de forma automática, sin tener que responder ella misma.",case:"¿Qué herramienta del stack cubre esta función y en qué etapa del funnel actúa?",o:["MailerLite, y actúa en la etapa de cobro del producto","Hotmart, y actúa en la etapa de entrega del producto","ManyChat, y actúa en la etapa de captura para entregar el lead magnet","Vidalytics, y actúa en la etapa de conversión midiendo el drop-off"],c:2,e:"ManyChat automatiza los DMs en Instagram y WhatsApp: 'comenta una palabra clave, recibe el enlace por DM'. Opera en la captura, justo cuando el lead magnet convierte una visita en contacto; Hotmart cobra y Vidalytics aloja la VSL."}
 ];
 </script>
 <script src="assets/afluence.js"></script>

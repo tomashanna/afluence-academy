@@ -170,19 +170,19 @@ PROOF STACK → OFFER STACK → URGENCIA → CIERRE/CTA</div>
   <div class="panel-view quiz" id="quiz">
     <div class="quiz-intro">
       <h2>Valida lo aprendido</h2>
-      <p>12 preguntas en tres niveles: reconoces el término, entiendes el concepto y lo aplicas a un caso. Necesitas <b>70%</b> para aprobar el módulo.</p>
+      <p>14 preguntas en tres niveles: reconoces el término, entiendes el concepto y lo aplicas a un caso. Necesitas <b>70%</b> para aprobar el módulo.</p>
       <div class="legend">
         <span class="chip"><i>R</i>Recall</span><span class="chip"><i>C</i>Comprensión</span><span class="chip"><i>A</i>Aplicación</span>
       </div>
     </div>
     <div class="qprog">
       <div class="qpbar"><div class="qpfill" id="qpfill"></div></div>
-      <div class="qpmeta" id="qpmeta">0 / 12</div>
+      <div class="qpmeta" id="qpmeta">0 / 14</div>
     </div>
     <div id="qhost"></div>
     <div class="result" id="qresult"></div>
     <div class="qfoot">
-      <span class="foot-msg" id="qmsg">Responde las 12 preguntas</span>
+      <span class="foot-msg" id="qmsg">Responde las 14 preguntas</span>
       <div>
         <button class="btn btn-ghost" onclick="resetQuiz()" id="qreset" style="display:none">Reintentar</button>
         <button class="btn btn-primary" onclick="checkQuiz()" id="qbtn" disabled>Comprobar →</button>
@@ -211,7 +211,9 @@ var Q=[
  {t:'app',case:"Sofía vende 'el sistema de los 3 sobres invisibles' en lugar de 'un método para ahorrar'.",q:"¿Qué elemento del VSL está aplicando con ese nombre propio y memorable?",o:["El proof stack","El mecanismo único","La agitación","El true play rate"],c:1,e:"Un nombre propio, memorable y distinto es el mecanismo único: lo que la separa de 'uno más' del montón."},
  {t:'app',case:"El VSL de Diego tiene un true play rate muy bajo: casi nadie le da play, aunque quienes lo ven se quedan hasta el final.",q:"¿Dónde está el problema y dónde NO?",o:["En el guion del VSL; hay que reescribir el hook y el mecanismo","Antes del VSL: en la landing, la miniatura o la promesa que llevó a la página; no en el guion","En el offer stack; falta agregar bonos","En la urgencia; falta una fecha de cierre"],c:1,e:"Si el true play rate es bajísimo, el problema es previo al video. No tiene sentido reescribir el guion si casi nadie le da play."},
  {t:'app',case:"Un creador arma su VSL así: hook, problema, y de ahí salta directo a presentar el precio y los bonos. No incluye testimonios ni explica por qué fallaron las soluciones que el avatar ya probó.",q:"<b>Reto.</b> Identifica los DOS errores estructurales y su consecuencia.",o:["Saltó la urgencia y el cierre; el video queda sin CTA","Saltó el mecanismo del problema y metió la oferta antes del proof stack; el avatar no cree y el precio suena caro","Saltó el hook y la agitación; el watch time sube demasiado","Puso el proof stack antes de la solución y duplicó el hook"],c:1,e:"Sin mecanismo del problema el avatar carga su escepticismo; y oferta antes de prueba hace que suene a humo y el precio parezca caro."},
- {t:'app',case:"Una agencia revisa el VSL de un creador. El true play rate es alto y el watch time es bueno en general, pero hay un drop-off marcado justo donde se presenta la solución, antes de cualquier prueba.",q:"<b>Reto.</b> ¿Qué te dice la combinación de métricas y qué sección sospechas?",o:["El problema es la landing; nadie le da play","El problema está en la solución/mecanismo: la gente entra y se queda, pero no cree la afirmación de la solución y se va ahí; revisa el mecanismo (y quizá adelantar prueba)","El problema es el precio del offer stack del final","No hay problema: con buen watch time el VSL convierte seguro"],c:1,e:"True play rate y watch time descartan que el problema sea entrar o la retención general; el drop-off localiza la fuga en la solución, donde el avatar deja de creer."}
+ {t:'app',case:"Una agencia revisa el VSL de un creador. El true play rate es alto y el watch time es bueno en general, pero hay un drop-off marcado justo donde se presenta la solución, antes de cualquier prueba.",q:"<b>Reto.</b> ¿Qué te dice la combinación de métricas y qué sección sospechas?",o:["El problema es la landing; nadie le da play","El problema está en la solución/mecanismo: la gente entra y se queda, pero no cree la afirmación de la solución y se va ahí; revisa el mecanismo (y quizá adelantar prueba)","El problema es el precio del offer stack del final","No hay problema: con buen watch time el VSL convierte seguro"],c:1,e:"True play rate y watch time descartan que el problema sea entrar o la retención general; el drop-off localiza la fuga en la solución, donde el avatar deja de creer."},
+ {t:'app',q:"Renata graba un VSL para su mastermind de oratoria. Tras nombrar el problema ('te paralizas al hablar en público'), quiere reforzar esa sección antes de presentar nada de su método.",case:"¿Qué debería hacer en la sección de <b>agitación</b> para que cumpla su función?",o:["Mostrar las consecuencias de no resolverlo: seguir perdiendo ascensos y clientes por no saber presentar, año tras año","Adelantar su mecanismo único y el nombre de su método para que suene distinto","Presentar de inmediato los testimonios de alumnas que ya superaron el miedo","Anunciar que quedan pocos cupos y que el precio sube esta semana"],c:0,e:"La agitación amplifica el dolor mostrando el costo real de la inacción, que el avatar suele minimizar. Aún no toca solución, prueba ni urgencia: eso vendría en secciones posteriores."},
+ {t:'app',q:"Diego llega en su VSL al momento de presentar la oferta de su curso. Dice solo: 'son 4 módulos por 197 dólares, haz clic abajo' y pasa directo al botón.",case:"¿Qué le falta a su <b>offer stack</b> según la estructura del VSL?",o:["Le falta agitar más el problema antes de llegar a este punto del video","Le falta sumar los bonos y la garantía y comparar el valor total contra los 197 dólares para que el precio parezca pequeño","Le falta medir el true play rate antes de mostrar el precio","Le falta repetir el hook justo antes del botón para retener"],c:1,e:"El offer stack es producto más bonos más garantía y la comparación del valor total contra el precio real. Sin ese contraste de valor, los 197 dólares se evalúan solos y suenan caros."}
 ];
 </script>
 <script src="assets/afluence.js"></script>

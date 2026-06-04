@@ -175,19 +175,19 @@ AIDA/PAS   →  cómo escribir cada PIEZA concreta (el copy, Módulo 3)</div>
   <div class="panel-view quiz" id="quiz">
     <div class="quiz-intro">
       <h2>Valida lo aprendido</h2>
-      <p>12 preguntas en tres niveles: reconoces el término, entiendes el concepto y lo aplicas a un caso. Necesitas <b>70%</b> para aprobar el módulo.</p>
+      <p>14 preguntas en tres niveles: reconoces el término, entiendes el concepto y lo aplicas a un caso. Necesitas <b>70%</b> para aprobar el módulo.</p>
       <div class="legend">
         <span class="chip"><i>R</i>Recall</span><span class="chip"><i>C</i>Comprensión</span><span class="chip"><i>A</i>Aplicación</span>
       </div>
     </div>
     <div class="qprog">
       <div class="qpbar"><div class="qpfill" id="qpfill"></div></div>
-      <div class="qpmeta" id="qpmeta">0 / 12</div>
+      <div class="qpmeta" id="qpmeta">0 / 14</div>
     </div>
     <div id="qhost"></div>
     <div class="result" id="qresult"></div>
     <div class="qfoot">
-      <span class="foot-msg" id="qmsg">Responde las 12 preguntas</span>
+      <span class="foot-msg" id="qmsg">Responde las 14 preguntas</span>
       <div>
         <button class="btn btn-ghost" onclick="resetQuiz()" id="qreset" style="display:none">Reintentar</button>
         <button class="btn btn-primary" onclick="checkQuiz()" id="qbtn" disabled>Comprobar →</button>
@@ -216,7 +216,9 @@ var Q=[
  {t:'app',q:"Renata vende un mastermind de oratoria high-ticket. \"Lanza\" arma su VSL contando una historia donde la clienta es la protagonista que supera su miedo, y Renata aparece como la mentora que la guía.",case:"¿De qué referente viene esa estructura narrativa?",o:["Russell Brunson (funnels)","Donald Miller (StoryBrand): el cliente es héroe, la marca es guía","Jeff Walker (PLF)","Sam Ovens (Skool)"],c:1,e:"Cliente como héroe + marca como guía = StoryBrand de Donald Miller."},
  {t:'app',q:"Diego monta su negocio de IA/productividad con un ebook low-ticket → curso → comunidad en Skool, escalando paso a paso a quien ya compró.",case:"¿Qué dos aportes/referentes reconoces aquí?",o:["La escalera de valor (Brunson) y Skool (Sam Ovens)","El PLF (Walker) y StoryBrand (Miller)","La ecuación de valor (Hormozi) y el email marketing (Porterfield)","El neuromarketing (Klaric) y los funnels (Kern)"],c:0,e:"La escalera de valor es de Brunson; Skool es la plataforma creada por Sam Ovens."},
  {t:'app',q:"<b>Reto.</b> Marco (fitness, ~600K) mira un lanzamiento que va a operar \"Lanza\" y dice: \"está todo en fases con videos de calentamiento (eso es de uno), el cliente es el héroe del copy (de otro), y la oferta tiene bonos y garantía irresistibles (de un tercero)\".",case:"¿Qué demuestra que Marco entendió el módulo?",o:["Que memorizó cuatro nombres sueltos sin conectarlos","Que reconoce qué framework opera en cada capa: PLF (Walker), StoryBrand (Miller) y oferta irresistible (Hormozi), apilados en un mismo lanzamiento","Que cree que solo uno de los frameworks es el correcto","Que confunde a Brunson con Hormozi"],c:1,e:"Señal de dominio: mirar un lanzamiento y nombrar qué framework opera en cada capa, viéndolos apilados. PLF para las fases, StoryBrand para el copy y Hormozi para la oferta."},
- {t:'app',q:"<b>Reto.</b> Un colega nuevo dice en una reunión: \"hagamos esto estilo Hormozi\", pero cuando le preguntas qué significa, solo repite el nombre y no sabe explicar la ecuación de valor ni qué hace irresistible a una oferta.",case:"Según los errores comunes del módulo, ¿cuál está cometiendo?",o:["Tratar los frameworks como recetas rígidas","Citar nombres sin entender las ideas detrás","Ignorar el ecosistema hispano","Aplicar un solo framework a todo"],c:1,e:"Decir 'es Hormozi' sin poder explicar la ecuación de valor delata que no se entendió la idea. El error es citar nombres sin entenderlos."}
+ {t:'app',q:"<b>Reto.</b> Un colega nuevo dice en una reunión: \"hagamos esto estilo Hormozi\", pero cuando le preguntas qué significa, solo repite el nombre y no sabe explicar la ecuación de valor ni qué hace irresistible a una oferta.",case:"Según los errores comunes del módulo, ¿cuál está cometiendo?",o:["Tratar los frameworks como recetas rígidas","Citar nombres sin entender las ideas detrás","Ignorar el ecosistema hispano","Aplicar un solo framework a todo"],c:1,e:"Decir 'es Hormozi' sin poder explicar la ecuación de valor delata que no se entendió la idea. El error es citar nombres sin entenderlos."},
+ {t:'app',q:"<b>Lanza</b> revisa la oferta del reto de 21 días 'Ordena tu plata' de Sofía. Suben el valor percibido del resultado (salir de deudas en 90 días), bajan el tiempo y el esfuerzo que le cuesta al alumno aplicarlo, y añaden bonos y una garantía para que comprar se sienta sin riesgo.",case:"¿Qué framework está guiando este trabajo sobre la oferta?",o:["El PLF de Jeff Walker, que define las fases del lanzamiento","La ecuación de valor y la oferta irresistible de Alex Hormozi","StoryBrand de Donald Miller, el cliente como héroe","La escalera de valor de Russell Brunson"],c:1,e:"Subir el sueño y bajar el tiempo, el esfuerzo y el riesgo percibidos es trabajar la ecuación de valor para construir una oferta irresistible: la tesis central de Hormozi. Walker define el cuándo, Brunson el por dónde y Miller el cómo se cuenta; Hormozi define qué oferta recibe el cliente."},
+ {t:'app',q:"Diego quiere lanzar su curso de IA y decide hacerlo 'todo con StoryBrand': pule la narrativa del cliente como héroe, pero no estructura fases de lanzamiento, no diseña su funnel ni su escalera, y no trabaja la oferta. Confía en que una buena historia basta.",case:"Según los errores comunes del módulo, ¿qué falla en el enfoque de Diego?",o:["Está citando nombres sin entender las ideas detrás de StoryBrand","Aprende un solo framework y lo aplica a todo, dejando huecos en las demás capas (fases, funnel, oferta)","Está ignorando el ecosistema hispano de referentes","Trata StoryBrand como una lente flexible en lugar de una receta rígida"],c:1,e:"Cada framework resuelve una capa distinta y se apilan; usar solo uno deja sin cubrir las demás. Diego cuida la narrativa (Miller) pero olvida las fases (Walker), el funnel y la escalera (Brunson) y la oferta (Hormozi)."}
 ];
 </script>
 <script src="assets/afluence.js"></script>

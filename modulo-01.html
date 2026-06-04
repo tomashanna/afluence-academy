@@ -220,19 +220,19 @@
   <div class="panel-view quiz" id="quiz">
     <div class="quiz-intro">
       <h2>Valida lo aprendido</h2>
-      <p>12 preguntas en tres niveles: reconoces el término, entiendes el concepto y lo aplicas a un caso. Necesitas <b>70%</b> para aprobar el módulo.</p>
+      <p>14 preguntas en tres niveles: reconoces el término, entiendes el concepto y lo aplicas a un caso. Necesitas <b>70%</b> para aprobar el módulo.</p>
       <div class="legend">
         <span class="chip"><i>R</i>Recall</span><span class="chip"><i>C</i>Comprensión</span><span class="chip"><i>A</i>Aplicación</span>
       </div>
     </div>
     <div class="qprog">
       <div class="qpbar"><div class="qpfill" id="qpfill"></div></div>
-      <div class="qpmeta" id="qpmeta">0 / 12</div>
+      <div class="qpmeta" id="qpmeta">0 / 14</div>
     </div>
     <div id="qhost"></div>
     <div class="result" id="qresult"></div>
     <div class="qfoot">
-      <span class="foot-msg" id="qmsg">Responde las 12 preguntas</span>
+      <span class="foot-msg" id="qmsg">Responde las 14 preguntas</span>
       <div>
         <button class="btn btn-ghost" onclick="resetQuiz()" id="qreset" style="display:none">Reintentar</button>
         <button class="btn btn-primary" onclick="checkQuiz()" id="qbtn" disabled>Comprobar →</button>
@@ -261,7 +261,9 @@ var Q=[
  {t:'app',q:"Dos creadores con audiencias distintas lanzan juntos un producto combinado y reparten lo recaudado.",case:"¿Qué figura es?",o:["Un upsell","Un joint venture (JV)","Un programa de afiliados","Un fee fijo"],c:1,e:"Dos partes con audiencia que colanzan = joint venture."},
  {t:'app',q:"Alguien arma todo el sistema de venta de un creador (emails, funnel, ads) pero no es dueño de la audiencia ni pone la cara.",case:"¿Qué rol cumple?",o:["Es el infoproductor","Es el operador de lanzamientos","Es un afiliado","Es el avatar"],c:1,e:"Ejecuta el sistema sin ser el creador = operador de lanzamientos."},
  {t:'app',q:"<b>Reto.</b> Una agencia duda entre dos creadores. Creador X: 800K seguidores pero audiencia fría y dispersa, sin historial de compra. Creador Y: 90K seguidores muy fieles que ya le compraron antes.",case:"Bajo la lógica de 'Dinero = Atención × Conversión × Ticket × Repetición', ¿con cuál conviene trabajar y por qué?",o:["Con X siempre: más atención es más dinero garantizado","Con Y: aunque tiene menos atención, su audiencia convierte y repite, y varias palancas pesan más que solo el volumen","Da igual, el resultado depende solo del producto","Con X, porque la conversión no importa si hay volumen"],c:1,e:"El error de principiante es mirar solo la atención. La fórmula multiplica varias palancas: una audiencia fiel que YA compró tiene conversión y repetición altas, que pueden superar al volumen frío. El volumen tapa imperfecciones, pero no reemplaza la confianza."},
- {t:'app',q:"<b>Reto.</b> Un creador te dice: 'No quiero darte un % de mis ventas, prefiero pagarte un monto fijo al mes para no compartir mis ganancias si el lanzamiento explota'.",case:"Desde la perspectiva del reparto de riesgo, ¿qué está eligiendo y qué implica para la agencia?",o:["Elige revenue share; la agencia asume todo el riesgo","Elige un fee fijo; traslada el riesgo a la agencia (cobra igual venda poco o mucho) pero la agencia pierde el upside si explota","Elige un joint venture; ambos ganan igual","Elige un acuerdo de palabra; no hay implicación de riesgo"],c:1,e:"Un fee fijo significa que el creador paga lo mismo pase lo que pase: él reduce su riesgo de 'compartir el upside', pero le pone a la agencia el riesgo de cobrar poco si vende mucho. Por eso el revenue share es tan común: alinea incentivos y reparte tanto el riesgo como la recompensa."}
+ {t:'app',q:"<b>Reto.</b> Un creador te dice: 'No quiero darte un % de mis ventas, prefiero pagarte un monto fijo al mes para no compartir mis ganancias si el lanzamiento explota'.",case:"Desde la perspectiva del reparto de riesgo, ¿qué está eligiendo y qué implica para la agencia?",o:["Elige revenue share; la agencia asume todo el riesgo","Elige un fee fijo; traslada el riesgo a la agencia (cobra igual venda poco o mucho) pero la agencia pierde el upside si explota","Elige un joint venture; ambos ganan igual","Elige un acuerdo de palabra; no hay implicación de riesgo"],c:1,e:"Un fee fijo significa que el creador paga lo mismo pase lo que pase: él reduce su riesgo de 'compartir el upside', pero le pone a la agencia el riesgo de cobrar poco si vende mucho. Por eso el revenue share es tan común: alinea incentivos y reparte tanto el riesgo como la recompensa."},
+ {t:'app',q:"<b>Renata</b> está escribiendo la página de venta de su mastermind de oratoria y duda entre dos titulares. El A dice: '8 semanas, 16 sesiones en vivo y 40 plantillas de discursos'. El B dice: 'De congelarte al hablar en una reunión a presentar tu proyecto con seguridad en 8 semanas'.",case:"Según la lógica del módulo, ¿cuál titular debería elegir Renata y por qué?",o:["El A, porque al detallar todo el contenido el cliente percibe más valor por su dinero","El B, porque describe la transformación (el cambio que vive el cliente) y no solo el contenido, que es lo que de verdad se paga","Cualquiera de los dos: el titular casi no influye en si compran o no","El A, porque enumerar sesiones y plantillas es la forma de diferenciarse de la competencia"],c:1,e:"Nadie compra 'horas de material'; compra el resultado. Describir por contenido (sesiones, plantillas) te hace sonar como todos y competir por precio; describir por transformación vende lo que de verdad importa. La información es abundante; el camino al cambio es lo escaso."},
+ {t:'app',q:"La agencia <b>Lanza</b> prepara una reunión para sumar a <b>Marco</b> a su cartera. Un junior arma la presentación pensando en convencer a 'hombres y mujeres de 20 a 35 que quieren entrenar en casa', y enfoca todo el mensaje en los beneficios del entrenamiento sin gimnasio.",case:"¿Qué error cometió el junior respecto al ICP?",o:["Ninguno: ese perfil es exactamente el ICP que Lanza debe atender en esa reunión","Confundió el ICP con el avatar: a Lanza lo que le interesa como socio es el creador (Marco), mientras que ese perfil es el cliente final de Marco","Debió enfocarse en el avatar, porque es quien paga el revenue share a la agencia","Calculó mal el ticket del producto de Marco antes de la reunión"],c:1,e:"El ICP de la agencia es el creador-socio (Marco), no el comprador final. Ese perfil de 20 a 35 que entrena en casa es el avatar de Marco. Para convencer a Marco hay que hablarle a él como socio comercial, no venderle el beneficio que él ya le ofrece a su propia audiencia."}
 ];
 </script>
 <script src="assets/afluence.js"></script>
