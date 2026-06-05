@@ -38,6 +38,18 @@
 .level .badge{display:inline-block;font-family:var(--exp);font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--strong);background:#fff;padding:4px 9px;margin-top:12px}
 .level .soon{display:inline-block;font-family:var(--exp);font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted2);border:1px solid var(--line);padding:4px 9px;margin-top:12px}
 
+/* los casos del nivel (personajes ficticios) */
+.casos{border:1px solid var(--line)}
+.caso{display:flex;gap:18px;padding:18px 20px;border-bottom:1px solid var(--line);scroll-margin-top:24px}
+.caso:last-child{border-bottom:none}
+.caso .cini{font-family:var(--exp);font-weight:900;font-size:26px;color:transparent;-webkit-text-stroke:1.2px #C2C2BD;flex-shrink:0;width:46px}
+.caso .cinfo{flex:1;min-width:0}
+.caso .cn{font-family:var(--exp);font-weight:700;font-size:15px;text-transform:uppercase;color:var(--strong);letter-spacing:.01em}
+.caso .cn span{color:var(--muted);font-weight:600;text-transform:none;font-family:var(--sans);font-size:13.5px;margin-left:8px;letter-spacing:0}
+.caso .cline{font-size:13.5px;color:var(--muted);margin-top:4px;line-height:1.5}
+.caso .cline b{color:var(--ink);font-weight:600}
+@media(max-width:520px){.caso .cini{font-size:20px;width:34px}}
+
 /* 11 módulos */
 .mods{border:1px solid var(--line)}
 .mod{display:flex;align-items:center;gap:18px;padding:17px 20px;border-bottom:1px solid var(--line);text-decoration:none;transition:background .15s}
@@ -60,16 +72,28 @@
 .how .step .sl{font-family:var(--exp);font-weight:800;font-size:13px;text-transform:uppercase;color:var(--strong);margin-bottom:6px}
 .how .step .sd{font-size:13px;color:var(--muted);line-height:1.5}
 
-/* resumen del nivel */
-.resumen{border:1px solid var(--line);background:var(--panel);padding:32px 28px;text-align:center}
-.resumen .rcover{width:84px;height:84px;margin:0 auto 18px;background:var(--strong);display:grid;place-items:center}
-.resumen .rcover svg{width:36px;height:36px}
-.resumen h3{font-family:var(--exp);font-weight:900;font-size:22px;text-transform:uppercase;color:var(--strong);margin-bottom:8px}
-.resumen p{font-size:14.5px;color:var(--muted);max-width:480px;margin:0 auto 22px;line-height:1.55}
-.resumen audio{width:100%;max-width:460px;margin:0 auto;display:block}
-.resumen .rdl{margin-top:16px}
-.resumen .rdl a{font-family:var(--exp);font-weight:700;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;border:1px solid var(--line);padding:10px 18px;display:inline-block}
-.resumen .rdl a:hover{color:var(--strong);border-color:var(--strong)}
+/* audio introductorio (se muestra solo si audio/intro.mp3 existe) */
+.introaudio{display:none;margin-top:26px;border:1px solid var(--line);background:var(--panel);padding:18px 20px;align-items:center;gap:16px;max-width:600px}
+.introaudio.on{display:flex}
+.introaudio .ii{width:42px;height:42px;background:var(--strong);display:grid;place-items:center;flex-shrink:0}
+.introaudio .ii svg{width:20px;height:20px}
+.introaudio .im{flex:1;min-width:0}
+.introaudio .im .it{font-family:var(--exp);font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--strong)}
+.introaudio .im .id{font-size:12.5px;color:var(--muted);margin:2px 0 8px}
+.introaudio audio{width:100%;height:36px;display:block}
+@media(max-width:520px){.introaudio{flex-direction:column;align-items:flex-start}}
+
+/* cierre del nivel (teaser hacia resumen.html) */
+.cierre{display:flex;align-items:center;gap:22px;border:1px solid var(--line);background:var(--strong);padding:28px;text-decoration:none;transition:opacity .15s}
+.cierre:hover{opacity:.92}
+.cierre .ci{width:64px;height:64px;background:#fff;display:grid;place-items:center;flex-shrink:0}
+.cierre .ci svg{width:28px;height:28px}
+.cierre .cm{flex:1;min-width:0}
+.cierre .ct{font-family:var(--exp);font-weight:900;font-size:19px;text-transform:uppercase;color:#fff}
+.cierre .cd{font-size:13.5px;color:rgba(255,255,255,.65);margin-top:4px;line-height:1.5}
+.cierre .carrow{font-family:var(--exp);font-weight:700;color:rgba(255,255,255,.7);font-size:20px;flex-shrink:0}
+.cierre:hover .carrow{color:#fff}
+@media(max-width:520px){.cierre{flex-direction:column;align-items:flex-start}.cierre .carrow{display:none}}
 
 /* progreso del alumno (badges escritos por el quiz de cada módulo) */
 .mod .mscore{font-family:var(--exp);font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--green);background:var(--greenBg);border:1px solid var(--green);padding:4px 8px;flex-shrink:0}
@@ -102,6 +126,16 @@
       <div class="cta">
         <a class="btn btn-primary" href="modulo-01.html" style="text-decoration:none">Empezar por el Módulo 01 →</a>
         <a class="btn btn-ghost" href="#modulos" style="text-decoration:none">Ver los 11 módulos</a>
+      </div>
+      <div class="introaudio" id="introAudio">
+        <div class="ii"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2a4 4 0 0 0-4 4v6a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4z" fill="#fff"/><path d="M5 11v1a7 7 0 0 0 14 0v-1M12 19v3" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <div class="im">
+          <div class="it">¿Primera vez aquí?</div>
+          <div class="id">Escucha la intro del programa: qué es el Nivel 1 y cómo sacarle el jugo al sitio.</div>
+          <audio id="introPlayer" controls preload="metadata">
+            <source src="audio/intro.mp3" type="audio/mpeg">
+          </audio>
+        </div>
       </div>
     </div>
   </header>
@@ -155,15 +189,63 @@
       <div class="step">
         <div class="si"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <div class="sl">4 · Valida</div>
-        <div class="sd">El quiz de 12 preguntas. Con 70% o más apruebas el módulo y desbloqueas el botón al siguiente.</div>
+        <div class="sd">El quiz de 14 preguntas. Con 70% o más apruebas el módulo y desbloqueas el botón al siguiente.</div>
       </div>
     </div>
-    <div class="note" style="margin-top:18px"><b>Tu avance queda guardado en este navegador.</b> Cada módulo aprobado se marca abajo con su nota, el botón principal pasa a "Continuar donde quedaste", y puedes reintentar cualquier quiz las veces que quieras: siempre se guarda tu mejor nota.</div>
+    <div class="note" style="margin-top:18px"><b>Tu avance queda guardado en este navegador.</b> Cada módulo aprobado se marca abajo con su nota, el botón principal pasa a continuar por el módulo que te toca, y puedes reintentar cualquier quiz las veces que quieras: siempre se guarda tu mejor nota.</div>
+  </section>
+
+  <!-- ===== LOS CASOS DEL NIVEL ===== -->
+  <section class="sec" id="casos">
+    <div class="sec-h"><span class="hn">03</span> Los casos que vas a seguir</div>
+    <p class="intro">Todo el nivel enseña con un set fijo de <b>creadores ficticios</b>: los mismos cinco aparecen una y otra vez en lecciones, ejemplos y preguntas de quiz, para que construyas un caso mental continuo en vez de procesar ejemplos sueltos. Cuando una pregunta mencione a Sofía o a Marco, es de ellos de quienes habla. Todos los nombres, números y marcas son inventados.</p>
+    <div class="casos">
+      <div class="caso" id="caso-sofia">
+        <span class="cini">S</span>
+        <div class="cinfo">
+          <div class="cn">Sofía <span>coach de finanzas personales</span></div>
+          <div class="cline"><b>Audiencia:</b> ~250.000 seguidoras, mayoría mujeres de 25 a 40 · <b>Producto típico:</b> reto de 21 días 'Ordena tu plata' que escala a mentoría high-ticket.</div>
+          <div class="cline"><b>La verás en:</b> el caso modelo completo. Es la protagonista por defecto del nivel.</div>
+        </div>
+      </div>
+      <div class="caso" id="caso-marco">
+        <span class="cini">M</span>
+        <div class="cinfo">
+          <div class="cn">Marco <span>experto en fitness en casa</span></div>
+          <div class="cline"><b>Audiencia:</b> ~600.000 seguidores, hombres y mujeres de 20 a 35 · <b>Producto típico:</b> reto gratis de 7 días → curso → comunidad de pago mensual.</div>
+          <div class="cline"><b>Lo verás en:</b> ejemplos de volumen, tráfico pagado y membresías recurrentes.</div>
+        </div>
+      </div>
+      <div class="caso" id="caso-renata">
+        <span class="cini">R</span>
+        <div class="cinfo">
+          <div class="cn">Renata <span>mentora de oratoria y marca personal</span></div>
+          <div class="cline"><b>Audiencia:</b> ~80.000 seguidores, profesionales y emprendedores · <b>Producto típico:</b> masterclass → mastermind high-ticket de pocos cupos.</div>
+          <div class="cline"><b>La verás en:</b> ejemplos de high-ticket, application funnel y venta por llamada.</div>
+        </div>
+      </div>
+      <div class="caso" id="caso-diego">
+        <span class="cini">D</span>
+        <div class="cinfo">
+          <div class="cn">Diego <span>creador de nicho técnico (productividad e IA)</span></div>
+          <div class="cline"><b>Audiencia:</b> ~120.000 seguidores early-adopters · <b>Producto típico:</b> ebook low-ticket → curso → comunidad en Skool.</div>
+          <div class="cline"><b>Lo verás en:</b> ejemplos de escalera de valor, tripwires y stack moderno.</div>
+        </div>
+      </div>
+      <div class="caso" id="caso-lanza">
+        <span class="cini">L</span>
+        <div class="cinfo">
+          <div class="cn">Lanza <span>agencia de lanzamientos</span></div>
+          <div class="cline"><b>Qué hace:</b> opera lanzamientos para varios creadores (incluidos los cuatro de arriba) bajo revenue share, con operadores, content managers, copywriters, closers y setters IA.</div>
+          <div class="cline"><b>La verás en:</b> el modelo agencia-creador, los roles del equipo y la operación día a día.</div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- ===== LOS 11 MÓDULOS ===== -->
   <section class="sec" id="modulos">
-    <div class="sec-h"><span class="hn">03</span> Once módulos</div>
+    <div class="sec-h"><span class="hn">04</span> Once módulos</div>
     <p class="intro">Progresión de lo general a lo complejo. La columna vertebral del nivel es el diccionario de <b>181 términos</b>: completar los 11 módulos = dominar el diccionario completo.</p>
     <div style="margin:-6px 0 22px"><a class="btn btn-ghost" href="diccionario.html" style="text-decoration:none">Abrir el diccionario completo · 181 términos →</a></div>
     <div class="mods">
@@ -181,27 +263,32 @@
     </div>
   </section>
 
-  <!-- ===== RESUMEN DEL NIVEL 1 ===== -->
+  <!-- ===== CIERRE DEL NIVEL 1 ===== -->
   <section class="sec" id="resumen">
-    <div class="sec-h"><span class="hn">04</span> Resumen del Nivel 1</div>
-    <p class="intro">¿Terminaste los 11 módulos? Este audio repasa todo el nivel de un tirón: ideal para fijar el mapa completo antes de avanzar.</p>
-    <div class="resumen">
-      <div class="rcover"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2a4 4 0 0 0-4 4v6a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4z" fill="#fff"/><path d="M5 11v1a7 7 0 0 0 14 0v-1M12 19v3" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></div>
-      <h3>Repaso completo · Nivel 1</h3>
-      <p>Una síntesis en audio de todo lo aprendido en el Beginner, de El Terreno a los Casos Reales.</p>
-      <audio id="resAudio" controls preload="metadata">
-        <source src="audio/resumen.mp3" type="audio/mpeg">
-        Tu navegador no soporta audio.
-      </audio>
-      <div class="rdl"><a id="resDownload" href="audio/resumen.mp3" download="ZeroToHero_Nivel1_Resumen.mp3">↓ Descargar el resumen</a></div>
-    </div>
+    <div class="sec-h"><span class="hn">05</span> Cierre del Nivel 1</div>
+    <p class="intro">¿Terminaste los 11 módulos? Te espera el cierre del nivel: tu progreso completo, el repaso en audio de todo lo aprendido y el siguiente paso del camino.</p>
+    <a class="cierre" href="resumen.html">
+      <div class="ci"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#111" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="cm">
+        <div class="ct">Ir al cierre del nivel</div>
+        <div class="cd">Tu progreso módulo a módulo, el repaso completo en audio y lo que viene después.</div>
+      </div>
+      <span class="carrow">→</span>
+    </a>
   </section>
 
   <footer style="margin-top:64px">Afluence · Zero to Hero en Infoproductos · Nivel 1 · Beginner</footer>
 </div>
 
 <script>
-  (function(){var s=document.querySelector('#resAudio source');var d=document.getElementById('resDownload');if(s&&d)d.href=s.src;})();
+  /* ---- audio intro: el bloque aparece solo si audio/intro.mp3 existe ---- */
+  (function(){
+    var p=document.getElementById('introPlayer'),box=document.getElementById('introAudio');
+    if(!p||!box)return;
+    /* readyState>=1: los metadatos pueden haber cargado ANTES de registrar el listener */
+    if(p.readyState>=1){box.classList.add('on');}
+    else{p.addEventListener('loadedmetadata',function(){box.classList.add('on');});}
+  })();
   /* ---- progreso del alumno: lo escribe el quiz de cada módulo en localStorage ---- */
   (function(){
     var st;try{st=JSON.parse(localStorage.getItem('afl-n1-progress')||'{}');}catch(e){return;}
@@ -220,7 +307,7 @@
     var cta=document.querySelector('.cta .btn-primary');
     if(cta){
       if(firstPending){cta.textContent='Continuar: Módulo '+firstPending.num+' →';cta.setAttribute('href',firstPending.href);}
-      else{cta.textContent='Nivel 1 completado ✓ · Escucha el resumen';cta.setAttribute('href','#resumen');}
+      else{cta.textContent='Nivel 1 completado ✓ · Cierra el nivel';cta.setAttribute('href','resumen.html');}
     }
     /* línea de progreso bajo el CTA + contador en la sección de módulos */
     var hp=document.createElement('div');hp.className='hprog';

@@ -22,6 +22,30 @@ function shuffleIdx(n){
   for(i=n-1;i>0;i--){j=Math.floor(Math.random()*(i+1));t=a[i];a[i]=a[j];a[j]=t;}
   return a;
 }
+/* ---- links a los casos: si la pregunta menciona un personaje ficticio o un "Caso N"
+   de la lección, se pinta un chip-link bajo el enunciado (los personajes abren su ficha
+   en index.html#caso-X en pestaña nueva para no perder el quiz; los Caso N saltan a la Lección) ---- */
+var CASOS=[['Sofía','caso-sofia','El caso de Sofía'],['Marco','caso-marco','El caso de Marco'],['Renata','caso-renata','El caso de Renata'],['Diego','caso-diego','El caso de Diego'],['Lanza','caso-lanza','La agencia Lanza']];
+function casoLinks(q){
+  var txt=(q.q+' '+(q.case||'')).replace(/<[^>]+>/g,' ');
+  var out=[];
+  CASOS.forEach(function(c){
+    if(new RegExp('(^|[^A-Za-zÁ-ú])'+c[0]+'($|[^A-Za-zÁ-ú])').test(txt))
+      out.push('<a class="qcaso" href="index.html#'+c[1]+'" target="_blank" rel="noopener">↗ '+c[2]+'</a>');
+  });
+  var m=txt.match(/Caso ([123])\b/g)||[];
+  m.filter(function(v,i){return m.indexOf(v)===i;}).forEach(function(cs){
+    var n=cs.replace('Caso ','');
+    if(document.getElementById('caso-'+n))
+      out.push('<a class="qcaso" href="javascript:void(0)" onclick="goCaso(\'caso-'+n+'\')">↗ Repasa el Caso '+n+' en la Lección</a>');
+  });
+  return out.length?'<div class="qcasos">'+out.join('')+'</div>':'';
+}
+function goCaso(anchor){
+  var tab=document.querySelector('.tab');
+  if(tab)showTab('lesson',tab);
+  setTimeout(function(){var el=document.getElementById(anchor);if(el)el.scrollIntoView({behavior:'smooth',block:'start'});},150);
+}
 function renderQuiz(){
   host.innerHTML='';
   qPerm=Q.map(function(q){return shuffleIdx(q.o.length);});
@@ -39,6 +63,7 @@ function renderQuiz(){
       var d=document.createElement('div');d.className='q';d.id='q-'+idx;var L=['A','B','C','D'];
       d.innerHTML='<div class="qtext"><span class="qn">'+pre+gi+'.</span>'+q.q+'</div>'+
         (q.case?'<div class="qcase">'+q.case+'</div>':'')+
+        casoLinks(q)+
         '<div class="opts" id="o-'+idx+'">'+qPerm[idx].map(function(orig,oi){return '<div class="opt" onclick="pickQ('+idx+','+orig+')" id="o-'+idx+'-'+orig+'"><div class="mk">'+L[oi]+'</div><div><span class="lbl">'+L[oi]+'.</span> '+q.o[orig]+'</div></div>';}).join('')+'</div>'+
         '<div class="explain" id="e-'+idx+'"><b>Por qué:</b> '+q.e+'</div>';
       host.appendChild(d);
@@ -87,7 +112,7 @@ function checkQuiz(){
   var hasNext=!!(nextHref&&/modulo-/.test(nextHref));
   var r=document.getElementById('qresult');r.className='result show '+(pass?'pass':'fail');
   r.innerHTML='<div class="big">'+pct+'%</div><div class="rmsg"><strong>'+(pass?'Módulo aprobado':'A reforzar')+'</strong>'+ok+' de '+Q.length+' correctas. '+(pass?(hasNext?'¡Bien! Avanza al siguiente módulo.':'¡Completaste el último módulo del Nivel 1!'):'Repasa la lección y el podcast, y reintenta: necesitas 70%.')+'</div>'+
-    (pass?'<a class="btn btn-primary rnext" href="'+(hasNext?nextHref:'index.html')+'">'+(hasNext?'Siguiente módulo →':'Volver al índice →')+'</a>':'');
+    (pass?'<a class="btn btn-primary rnext" href="'+(hasNext?nextHref:'resumen.html')+'">'+(hasNext?'Siguiente módulo →':'Cerrar el Nivel 1 →')+'</a>':'');
   document.getElementById('qbtn').style.display='none';
   document.getElementById('qreset').style.display='inline-block';
   document.getElementById('qmsg').textContent=ok+'/'+Q.length+' correctas';

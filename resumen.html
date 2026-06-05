@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cierre del Nivel 1 · Zero to Hero en Infoproductos · Afluence</title>
+<meta name="description" content="Cierre del Nivel 1 (Beginner): tu progreso en los 11 módulos, el repaso completo en audio y el siguiente paso del camino Zero to Hero.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800;900&family=Archivo+Expanded:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/afluence.css">
+<style>
+/* ---- estilos propios de la vista de cierre (paleta heredada de afluence.css) ---- */
+.hero{padding:18px 0 6px}
+.hero h1{font-family:var(--exp);font-weight:900;line-height:.9;letter-spacing:-.01em;font-size:clamp(44px,10vw,92px);text-transform:uppercase;margin-top:8px}
+.hero h1 .out{color:transparent;-webkit-text-stroke:1.3px #BDBDB8;display:block}
+.hero h1 .sol{color:var(--strong);display:block}
+.hero .sub{font-family:var(--exp);font-size:13px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-top:20px}
+.hero .lead{margin-top:18px;color:var(--muted);font-size:17px;max-width:600px}
+.hero .lead b{color:var(--ink)}
+.hero .celebrate{display:none;margin-top:24px;font-family:var(--exp);font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:var(--green);padding:10px 16px}
+body.complete .hero .celebrate{display:inline-block}
+
+.sec{margin-top:64px}
+.sec-h{font-family:var(--exp);font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--strong);margin-bottom:18px;padding-bottom:10px;border-bottom:1px solid var(--line);display:flex;align-items:baseline;gap:12px}
+.sec-h .hn{color:transparent;-webkit-text-stroke:1px #C2C2BD;font-size:22px}
+.sec p.intro{font-size:16px;color:var(--muted);margin-bottom:22px;max-width:600px}
+
+/* progreso: barra + grid de módulos */
+.pbar{height:8px;background:var(--panel2);border:1px solid var(--line);margin-bottom:8px}
+.pbar .pfill{height:100%;background:var(--green);width:0;transition:width .4s ease}
+.pmeta{font-family:var(--exp);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:20px}
+.pmeta b{color:var(--green)}
+.pgrid{border:1px solid var(--line)}
+.pmod{display:flex;align-items:center;gap:14px;padding:13px 18px;border-bottom:1px solid var(--line);text-decoration:none;transition:background .15s}
+.pmod:last-child{border-bottom:none}
+.pmod:hover{background:var(--panel2)}
+.pmod .pnum{font-family:var(--exp);font-weight:900;font-size:20px;color:transparent;-webkit-text-stroke:1.1px #C2C2BD;flex-shrink:0;width:38px}
+.pmod.ok .pnum{-webkit-text-stroke-color:var(--green)}
+.pmod .pt{flex:1;font-family:var(--exp);font-weight:700;font-size:13px;text-transform:uppercase;color:var(--strong);letter-spacing:.01em}
+.pmod .pscore{font-family:var(--exp);font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--green);background:var(--greenBg);border:1px solid var(--green);padding:4px 8px;flex-shrink:0}
+.pmod .ppend{font-family:var(--exp);font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted2);border:1px solid var(--line);padding:4px 8px;flex-shrink:0}
+
+/* audio de repaso */
+.resumen{border:1px solid var(--line);background:var(--panel);padding:32px 28px;text-align:center}
+.resumen .rcover{width:84px;height:84px;margin:0 auto 18px;background:var(--strong);display:grid;place-items:center}
+.resumen .rcover svg{width:36px;height:36px}
+.resumen h3{font-family:var(--exp);font-weight:900;font-size:22px;text-transform:uppercase;color:var(--strong);margin-bottom:8px}
+.resumen p{font-size:14.5px;color:var(--muted);max-width:480px;margin:0 auto 22px;line-height:1.55}
+.resumen audio{width:100%;max-width:460px;margin:0 auto;display:block}
+.resumen .rdl{margin-top:16px}
+.resumen .rdl a{font-family:var(--exp);font-weight:700;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;border:1px solid var(--line);padding:10px 18px;display:inline-block}
+.resumen .rdl a:hover{color:var(--strong);border-color:var(--strong)}
+
+/* vocabulario: chips */
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{font-family:var(--exp);font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--strong);border:1px solid var(--line);background:var(--panel);padding:7px 12px}
+.chips-cta{margin-top:20px}
+
+/* upsell nivel 2 */
+.next{border:1px solid var(--line);background:var(--strong);color:#fff;padding:34px 30px;position:relative}
+.next .nlv{font-family:var(--exp);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.next h3{font-family:var(--exp);font-weight:900;font-size:26px;text-transform:uppercase;color:#fff;margin:8px 0 12px}
+.next p{font-size:15px;color:rgba(255,255,255,.75);max-width:540px;line-height:1.6}
+.next p b{color:#fff}
+.next ul{list-style:none;margin:18px 0 0;padding:0}
+.next li{padding:9px 0 9px 26px;position:relative;border-bottom:1px solid rgba(255,255,255,.12);font-size:14px;color:rgba(255,255,255,.8)}
+.next li:last-child{border-bottom:none}
+.next li::before{content:"→";position:absolute;left:0;color:#fff;font-weight:700}
+.next .ncta{margin-top:26px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.next .ncta .soon{font-family:var(--exp);font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--strong);background:#fff;padding:8px 14px}
+.next .ncta .nhint{font-size:13px;color:rgba(255,255,255,.55)}
+.next .ncta a.go{font-family:var(--exp);font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--strong);background:#fff;padding:14px 22px;text-decoration:none;display:none}
+.next .ncta a.go:hover{background:var(--green);color:#fff}
+
+/* candado cuando el nivel no está completo */
+.next.locked{background:var(--panel);border:1px dashed #C6C6C1}
+.next.locked .nlv{color:var(--muted2)}
+.next.locked h3{color:var(--muted2)}
+.next.locked p,.next.locked li{color:var(--muted)}
+.next.locked li{border-bottom-color:var(--line)}
+.next.locked li::before{color:var(--muted2)}
+.next.locked .ncta{display:none}
+.next .lockmsg{display:none;margin-top:24px;font-family:var(--exp);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber);background:var(--amberBg);border:1px solid var(--amber);padding:10px 14px}
+.next.locked .lockmsg{display:inline-block}
+
+.backnav{margin-top:64px;padding-top:22px;border-top:1px solid var(--line)}
+.backnav a{font-family:var(--exp);font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-decoration:none}
+.backnav a:hover{color:var(--strong)}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header style="padding-top:46px">
+    <div class="brand">
+      <a href="index.html" title="Afluence">
+        <div class="logo"><svg viewBox="0 0 40 40" fill="none"><path d="M8 32 L24 6 L24 32 Z" fill="#111"/><path d="M24 32 L24 18 L33 32 Z" fill="#999"/><circle cx="11" cy="32" r="4" fill="#111"/></svg></div>
+        <div><div class="bn">Afluence</div><div class="bt">Building your empire</div></div>
+      </a>
+    </div>
+
+    <div class="hero">
+      <div class="sub">Zero to Hero en Infoproductos · Cierre del Nivel 1</div>
+      <h1><span class="out">Cierra el</span><span class="sol">Nivel 1.</span></h1>
+      <p class="lead"><b>Aquí termina el Beginner.</b> Revisa tu progreso, fija el mapa completo con el repaso en audio y mira hacia el siguiente paso del camino.</p>
+      <span class="celebrate">★ Nivel 1 completado · Los 11 módulos aprobados</span>
+    </div>
+  </header>
+
+  <!-- ===== TU PROGRESO ===== -->
+  <section class="sec" id="progreso">
+    <div class="sec-h"><span class="hn">01</span> Tu progreso</div>
+    <p class="intro">Lo que llevas aprobado, módulo a módulo, con tu mejor nota. El avance se guarda en este navegador.</p>
+    <div class="pbar"><div class="pfill" id="pfill"></div></div>
+    <div class="pmeta" id="pmeta">0 de 11 módulos aprobados</div>
+    <div class="pgrid" id="pgrid"></div>
+  </section>
+
+  <!-- ===== EL REPASO EN AUDIO ===== -->
+  <section class="sec" id="repaso">
+    <div class="sec-h"><span class="hn">02</span> El repaso completo</div>
+    <p class="intro">Todo el nivel de un tirón, de El Terreno a los Casos Reales: ideal para fijar el mapa completo y cerrar el nivel con la foto entera en la cabeza.</p>
+    <div class="resumen">
+      <div class="rcover"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2a4 4 0 0 0-4 4v6a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4z" fill="#fff"/><path d="M5 11v1a7 7 0 0 0 14 0v-1M12 19v3" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></div>
+      <h3>Repaso completo · Nivel 1</h3>
+      <p>Una síntesis en audio de todo lo aprendido en el Beginner. Diez minutos que consolidan once módulos.</p>
+      <audio id="resAudio" controls preload="metadata">
+        <source src="audio/resumen.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+      </audio>
+      <div class="rdl"><a id="resDownload" href="audio/resumen.mp3" download="ZeroToHero_Nivel1_Resumen.mp3">↓ Descargar el resumen</a></div>
+    </div>
+  </section>
+
+  <!-- ===== EL VOCABULARIO ===== -->
+  <section class="sec" id="vocabulario">
+    <div class="sec-h"><span class="hn">03</span> El idioma que ya hablas</div>
+    <p class="intro">Los 20 términos imprescindibles del nivel. Si puedes explicar cada uno con tus palabras, dominas el idioma del sector.</p>
+    <div class="chips">
+      <span>TOFU / MOFU / BOFU</span><span>Lead</span><span>Lead magnet</span><span>Nurturing</span><span>Open / close cart</span><span>VSL</span><span>TSL</span><span>Landing</span><span>Reto</span><span>Oferta irresistible</span><span>Value ladder</span><span>Upsell</span><span>Setter</span><span>Closer</span><span>CPL</span><span>CAC</span><span>LTV</span><span>ROAS</span><span>Orgánico vs pagado</span><span>Pixel</span>
+    </div>
+    <div class="chips-cta"><a class="btn btn-ghost" href="diccionario.html" style="text-decoration:none">Repasar el diccionario completo · 181 términos →</a></div>
+  </section>
+
+  <!-- ===== EL SIGUIENTE PASO ===== -->
+  <section class="sec" id="siguiente">
+    <div class="sec-h"><span class="hn">04</span> El siguiente paso</div>
+    <p class="intro">El Nivel 1 respondió la pregunta del <b>qué</b>: qué es este mundo y cómo funciona. El camino sigue con el <b>cómo</b>.</p>
+    <div class="next locked" id="nextCard">
+      <div class="nlv">Nivel 2 · Operador</div>
+      <h3>Aprende a ejecutar</h3>
+      <p>El Nivel 2 existe única y exclusivamente para responder <b>cómo se ejecuta un lanzamiento de verdad</b>. Se acaba la abstracción: te metes a las herramientas, armas los procesos y operas bajo presión real.</p>
+      <ul>
+        <li>Operar herramientas reales: funnels, automatizaciones, CRM y mensajería.</li>
+        <li>Armar SOPs desde cero: los procedimientos que mueven una operación día a día.</li>
+        <li>Ejecutar lanzamientos completos como se viven dentro de una agencia como Lanza.</li>
+      </ul>
+      <div class="ncta">
+        <span class="soon">Próximamente</span>
+        <span class="nhint">Tu progreso del Nivel 1 queda guardado aquí para cuando abra.</span>
+        <!-- Cuando exista la página del Nivel 2: poner la URL en N2_URL (script de abajo) y el botón aparece solo -->
+        <a class="go" id="n2go" href="#">Quiero el Nivel 2 →</a>
+      </div>
+      <span class="lockmsg" id="lockMsg">Se desbloquea al aprobar los 11 módulos</span>
+    </div>
+  </section>
+
+  <div class="backnav"><a href="index.html">← Volver al índice</a></div>
+
+  <footer>Afluence · Zero to Hero en Infoproductos · Cierre del Nivel 1</footer>
+</div>
+
+<script>
+  /* URL de la página de venta del Nivel 2: ponerla aquí cuando exista y el CTA aparece solo */
+  var N2_URL='';
+
+  (function(){var s=document.querySelector('#resAudio source');var d=document.getElementById('resDownload');if(s&&d)d.href=s.src;})();
+
+  /* ---- progreso del alumno: lo escribe el quiz de cada módulo en localStorage ---- */
+  (function(){
+    var MODS=[
+      ['01','El Terreno'],['02','Tipos de Producto y Lanzamiento'],['03','La Oferta y el Copy'],
+      ['04','El Funnel'],['05','Las Piezas Creativas'],['06','Anatomía del VSL'],
+      ['07','Las Métricas'],['08','El Tráfico y el Stack'],['09','Roles y Operación día a día'],
+      ['10','Frameworks y Referentes'],['11','Casos Reales']
+    ];
+    var st={};try{st=JSON.parse(localStorage.getItem('afl-n1-progress')||'{}');}catch(e){}
+    var grid=document.getElementById('pgrid');var passed=0;
+    MODS.forEach(function(m){
+      var num=m[0],title=m[1],p=st[num];var ok=!!(p&&p.passed);if(ok)passed++;
+      var a=document.createElement('a');
+      a.className='pmod'+(ok?' ok':'');a.href='modulo-'+num+'.html';
+      a.innerHTML='<span class="pnum">'+num+'</span><span class="pt">'+title+'</span>'+
+        (ok?'<span class="pscore">✓ '+p.pct+'%</span>':'<span class="ppend">Pendiente</span>');
+      grid.appendChild(a);
+    });
+    var pct=Math.round(passed/MODS.length*100);
+    document.getElementById('pfill').style.width=pct+'%';
+    document.getElementById('pmeta').innerHTML='<b>'+passed+'</b> de '+MODS.length+' módulos aprobados';
+
+    /* gating del cierre: con 11/11 se celebra y se desbloquea el siguiente paso */
+    if(passed===MODS.length){
+      document.body.classList.add('complete');
+      var card=document.getElementById('nextCard');card.classList.remove('locked');
+      if(N2_URL){
+        var go=document.getElementById('n2go');go.href=N2_URL;go.style.display='inline-block';
+        var soon=card.querySelector('.soon');if(soon)soon.style.display='none';
+        var hint=card.querySelector('.nhint');if(hint)hint.style.display='none';
+      }
+    }
+  })();
+</script>
+</body>
+</html>
