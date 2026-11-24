@@ -14,7 +14,7 @@ var host=document.getElementById('qhost');
 
 /* ---- progreso persistente del alumno (localStorage; lo lee también index.html) ---- */
 var PKEY='afl-n1-progress';
-var modId=(location.pathname.match(/modulo-(\d+)\.html/)||[])[1]||null;
+var modId=(location.pathname.match(/modulo-(\d+)(?:\.html)?\/?$/)||[])[1]||null; /* acepta /modulo-01.html y /modulo-01 (cleanUrls) */
 function aflGet(){try{return JSON.parse(localStorage.getItem(PKEY)||'{}');}catch(e){return {};}}
 function aflSet(st){try{localStorage.setItem(PKEY,JSON.stringify(st));}catch(e){}}
 function shuffleIdx(n){
