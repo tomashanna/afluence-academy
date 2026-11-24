@@ -24,10 +24,10 @@
     <p class="lead"><b>Las métricas son cómo sabes si el funnel funciona o solo <em>parece</em> que funciona.</b> Sin ellas operas a ciegas, confundes suerte con sistema y no puedes saber dónde se rompe lo que no vende. Léelo, míralo, escúchalo y valida lo aprendido.</p>
 
     <div class="tabs">
-      <button class="tab active" onclick="showTab('lesson',this)"><span class="n">A</span>Lección</button>
-      <button class="tab" onclick="showTab('video',this)"><span class="n">B</span>Vídeo</button>
-      <button class="tab" onclick="showTab('podcast',this)"><span class="n">C</span>Podcast</button>
-      <button class="tab" onclick="showTab('quiz',this)"><span class="n">D</span>Quiz</button>
+      <button type="button" class="tab active" onclick="showTab('lesson',this)"><span class="n">A</span>Lección</button>
+      <button type="button" class="tab" onclick="showTab('video',this)"><span class="n">B</span>Vídeo</button>
+      <button type="button" class="tab" onclick="showTab('podcast',this)"><span class="n">C</span>Podcast</button>
+      <button type="button" class="tab" onclick="showTab('quiz',this)"><span class="n">D</span>Quiz</button>
     </div>
   </header>
 
@@ -204,8 +204,8 @@ LTV &lt; CAC   →  pierdes en cada cliente (y más tráfico te hunde más rápi
     <div class="qfoot">
       <span class="foot-msg" id="qmsg">Responde las 14 preguntas</span>
       <div>
-        <button class="btn btn-ghost" onclick="resetQuiz()" id="qreset" style="display:none">Reintentar</button>
-        <button class="btn btn-primary" onclick="checkQuiz()" id="qbtn" disabled>Comprobar →</button>
+        <button type="button" class="btn btn-ghost" onclick="resetQuiz()" id="qreset" style="display:none">Reintentar</button>
+        <button type="button" class="btn btn-primary" onclick="checkQuiz()" id="qbtn" disabled>Comprobar →</button>
       </div>
     </div>
   </div>

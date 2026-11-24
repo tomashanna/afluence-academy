@@ -24,10 +24,10 @@
     <p class="lead"><b>El VSL es la pieza de venta más importante del sector</b>, y tiene una estructura interna probada (de hook a cierre) que se aprende sección por sección, junto a las métricas que dicen exactamente dónde falla. Léelo, míralo, escúchalo y valida lo aprendido.</p>
 
     <div class="tabs">
-      <button class="tab active" onclick="showTab('lesson',this)"><span class="n">A</span>Lección</button>
-      <button class="tab" onclick="showTab('video',this)"><span class="n">B</span>Vídeo</button>
-      <button class="tab" onclick="showTab('podcast',this)"><span class="n">C</span>Podcast</button>
-      <button class="tab" onclick="showTab('quiz',this)"><span class="n">D</span>Quiz</button>
+      <button type="button" class="tab active" onclick="showTab('lesson',this)"><span class="n">A</span>Lección</button>
+      <button type="button" class="tab" onclick="showTab('video',this)"><span class="n">B</span>Vídeo</button>
+      <button type="button" class="tab" onclick="showTab('podcast',this)"><span class="n">C</span>Podcast</button>
+      <button type="button" class="tab" onclick="showTab('quiz',this)"><span class="n">D</span>Quiz</button>
     </div>
   </header>
 
@@ -184,8 +184,8 @@ PROOF STACK → OFFER STACK → URGENCIA → CIERRE/CTA</div>
     <div class="qfoot">
       <span class="foot-msg" id="qmsg">Responde las 14 preguntas</span>
       <div>
-        <button class="btn btn-ghost" onclick="resetQuiz()" id="qreset" style="display:none">Reintentar</button>
-        <button class="btn btn-primary" onclick="checkQuiz()" id="qbtn" disabled>Comprobar →</button>
+        <button type="button" class="btn btn-ghost" onclick="resetQuiz()" id="qreset" style="display:none">Reintentar</button>
+        <button type="button" class="btn btn-primary" onclick="checkQuiz()" id="qbtn" disabled>Comprobar →</button>
       </div>
     </div>
   </div>

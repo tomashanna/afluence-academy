@@ -24,10 +24,10 @@
     <p class="lead"><b>Casi todo lo que se hace en el sector viene de un puñado de personas y sus frameworks.</b> Conocerlos te da el "por qué" detrás de las tácticas y el vocabulario común con cualquier operador del mundo. Léelo, míralo, escúchalo y valida lo aprendido.</p>
 
     <div class="tabs">
-      <button class="tab active" onclick="showTab('lesson',this)"><span class="n">A</span>Lección</button>
-      <button class="tab" onclick="showTab('video',this)"><span class="n">B</span>Vídeo</button>
-      <button class="tab" onclick="showTab('podcast',this)"><span class="n">C</span>Podcast</button>
-      <button class="tab" onclick="showTab('quiz',this)"><span class="n">D</span>Quiz</button>
+      <button type="button" class="tab active" onclick="showTab('lesson',this)"><span class="n">A</span>Lección</button>
+      <button type="button" class="tab" onclick="showTab('video',this)"><span class="n">B</span>Vídeo</button>
+      <button type="button" class="tab" onclick="showTab('podcast',this)"><span class="n">C</span>Podcast</button>
+      <button type="button" class="tab" onclick="showTab('quiz',this)"><span class="n">D</span>Quiz</button>
     </div>
   </header>
 
@@ -189,8 +189,8 @@ AIDA/PAS   →  cómo escribir cada PIEZA concreta (el copy, Módulo 3)</div>
     <div class="qfoot">
       <span class="foot-msg" id="qmsg">Responde las 14 preguntas</span>
       <div>
-        <button class="btn btn-ghost" onclick="resetQuiz()" id="qreset" style="display:none">Reintentar</button>
-        <button class="btn btn-primary" onclick="checkQuiz()" id="qbtn" disabled>Comprobar →</button>
+        <button type="button" class="btn btn-ghost" onclick="resetQuiz()" id="qreset" style="display:none">Reintentar</button>
+        <button type="button" class="btn btn-primary" onclick="checkQuiz()" id="qbtn" disabled>Comprobar →</button>
       </div>
     </div>
   </div>
