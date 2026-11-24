@@ -4,6 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Módulo 09 · Roles y Operación · Afluence · Nivel 1</title>
+<meta name="description" content="Una operación la mueven un puñado de roles que se pasan el lead entre sí mediante procesos definidos, y cada rol tiene hoy una contraparte tecnológica que lo asiste o lo reemplaza. Ese eje rol ↔ herramienta ↔ automatización es hacia dónde va el negocio.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_LA">
+<meta property="og:site_name" content="Afluence · Zero to Hero en Infoproductos">
+<meta property="og:title" content="Módulo 09 · Roles y Operación · Afluence · Nivel 1">
+<meta property="og:description" content="Una operación la mueven un puñado de roles que se pasan el lead entre sí mediante procesos definidos, y cada rol tiene hoy una contraparte tecnológica que lo asiste o lo reemplaza. Ese eje rol ↔ herramienta ↔ automatización es hacia dónde va el negocio.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800;900&family=Archivo+Expanded:wght@500;600;700;800;900&display=swap" rel="stylesheet">
@@ -24,10 +32,10 @@
     <p class="lead"><b>Una operación la mueven un puñado de roles que se pasan el lead entre sí mediante procesos definidos, y cada rol tiene hoy una contraparte tecnológica que lo asiste o lo reemplaza.</b> Ese eje rol ↔ herramienta ↔ automatización es hacia dónde va el negocio. Léelo, míralo, escúchalo y valida lo aprendido.</p>
 
     <div class="tabs">
-      <button class="tab active" onclick="showTab('lesson',this)"><span class="n">A</span>Lección</button>
-      <button class="tab" onclick="showTab('video',this)"><span class="n">B</span>Vídeo</button>
-      <button class="tab" onclick="showTab('podcast',this)"><span class="n">C</span>Podcast</button>
-      <button class="tab" onclick="showTab('quiz',this)"><span class="n">D</span>Quiz</button>
+      <button type="button" class="tab active" onclick="showTab('lesson',this)"><span class="n">A</span>Lección</button>
+      <button type="button" class="tab" onclick="showTab('video',this)"><span class="n">B</span>Vídeo</button>
+      <button type="button" class="tab" onclick="showTab('podcast',this)"><span class="n">C</span>Podcast</button>
+      <button type="button" class="tab" onclick="showTab('quiz',this)"><span class="n">D</span>Quiz</button>
     </div>
   </header>
 
@@ -227,8 +235,8 @@ OPERADOR supervisa · SOPs estandarizan · CLOSED LOOP atribuye todo</div>
     <div class="qfoot">
       <span class="foot-msg" id="qmsg">Responde las 14 preguntas</span>
       <div>
-        <button class="btn btn-ghost" onclick="resetQuiz()" id="qreset" style="display:none">Reintentar</button>
-        <button class="btn btn-primary" onclick="checkQuiz()" id="qbtn" disabled>Comprobar →</button>
+        <button type="button" class="btn btn-ghost" onclick="resetQuiz()" id="qreset" style="display:none">Reintentar</button>
+        <button type="button" class="btn btn-primary" onclick="checkQuiz()" id="qbtn" disabled>Comprobar →</button>
       </div>
     </div>
   </div>

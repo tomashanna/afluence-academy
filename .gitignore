@@ -1,14 +1,32 @@
-# Allowlist: ignorar TODO en la raíz y reincluir solo lo desplegable del sitio.
+# Allowlist: ignorar TODO en la raíz y reincluir solo lo que pertenece al repo
+# (sitio desplegable + tooling/documentación). Evita subir por accidente borradores,
+# guiones, .zip o material fuente que suele convivir en esta carpeta.
 /*
-!/.gitignore
-!/DEPLOY.md
+# --- sitio ---
 !/index.html
 !/resumen.html
 !/diccionario.html
 !/modulo-*.html
+!/favicon.svg
 !/assets/
 !/audio/
 !/video/
+!/vercel.json
+# --- repo / tooling ---
+!/.gitignore
+!/.editorconfig
+!/.htmlvalidate.json
+!/.github/
+!/scripts/
+!/package.json
+!/lychee.toml
+!/README.md
+!/SECURITY.md
+!/LICENSE
+!/LICENSE-CONTENT.md
 
 # Basura del SO (también dentro de subcarpetas)
 **/.DS_Store
+Thumbs.db
+node_modules/
+.vercel
