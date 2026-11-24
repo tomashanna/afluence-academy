@@ -1,4 +1,7 @@
 # Configuración de lychee (enlaces externos). El job de CI es informativo: no bloquea.
+# Solo enlaces externos: los archivos locales los valida scripts/check-site.mjs
+# (el job hace sparse checkout sin audio/vídeo).
+scheme = ["https", "http"]
 max_concurrency = 8
 timeout = 20
 max_retries = 2
